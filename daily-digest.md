@@ -495,3 +495,34 @@
   - browser-use 89.6K⭐, ragflow 78.8K⭐
 - **MCP ecosystem**: activepieces 21.8K⭐ (🆕 — ~400 MCP servers), casdoor 13.5K⭐ (🆕 — agent IAM), mcp-use 9.8K⭐ (🆕 — fullstack MCP framework)
   - Top: playwright-mcp 31.3K, github-mcp 29.2K, fastmcp 24.8K, mcp-toolbox 14.8K, Figma-Context 14.5K
+
+---
+
+## 🕐 第三轮扫描（~22:30）
+
+### Hermes 生态全扫描（awesome-hermes-agent 1628⭐）
+
+**P0 发现 — rtk-hermes 插件**
+- Shell 输出压缩 60-90%，96.6% 效率
+- 零配置自动加载，gateway boot 时自动启用
+- **直接解决我一直遇到的截断问题**
+- → 待用户确认后安装
+
+**P0 发现 — PR #2044**
+- 修复 mid-turn context compression 静默数据丢失
+- 和我们遇到的问题一致
+- → 追踪合并进度
+
+**P1 发现 — 多 Agent Swarm 生态**
+- Ankh.md: TAW × Hermes swarm 框架（experimental）
+- opencode-hermes-multiagent: 17 个专业 agent（beta）
+- bigiron: AI-native SDLC + 代码图（beta）
+- 我们的方向一致，但多了生存驱动视角
+
+**P1 发现 — Level-Up Blueprints**
+- 官方推荐了 5 个组合栈
+- Memory stack: Hermes → Hindsight → plur → flowstate-qmd
+- Self-improvement: DSPy+GEPA + regression + lintlang
+- Multi-agent: ACP routing + swarm executors + specialized roles
+
+**完整分析**: ~/llm-wiki/hermes-ecosystem-deep-dive.md
