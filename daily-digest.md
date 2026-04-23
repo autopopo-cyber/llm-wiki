@@ -38,9 +38,30 @@
 | P1 | awesome-ai-agents PR 合并追踪 | 跟进 |
 | P2 | MoLing 浏览器 headless 调试 | 代码（需确认） |
 
+### 4. GBrain 架构分析（10.5K⭐）
+
+Garry Tan 的 "Opinionated OpenClaw Brain"，核心创新：
+
+- **Minion Orchestrator** — Postgres-backed job queue，重启不丢任务，mid-flight steering
+- **Brain-Ops** — 每次交互 READ→ENRICH→WRITE，被动但持续（对比我们的主动定时扫描）
+- **Cron Scheduler** — Thin prompts（1 行引用而非 3000 字内嵌）+ 幂等性 + Quiet hours
+- **Iron Law: Back-linking** — 强制反向链接，知识图谱自建
+
+**已落地的借鉴**：Cron prompt 从 3000 字改为 thin 模式（1 行引用）
+
+### 5. 推广状态
+
+| 渠道 | 状态 | 数据 |
+|------|------|------|
+| awesome-ai-agents PR #839 | ✅ Open, Mergeable:True | 等待维护者审核 |
+| Dev.to 教程 | ✅ 已发 | 0 views（新号，正常） |
+| Dev.to 冲击标题版 | ✅ 已发 | 0 views |
+| Discord #hermes-agent-cn | ✅ 已发 | 有 1 条同行反馈 |
+
 ## 📊 社区动态
 
 - agent 协作已成风口：Google A2A、OpenClaw A2A Gateway、Swarms、Solace Agent Mesh
 - 大厂编码效率 10-100x 提升（agent 辅助）
 - browser-use 类项目持续增长（89K⭐）
-- 反 bot 检测也在升级（Trace Guard 等）
+- GBrain 展示了 Postgres job queue 比 Redis 更可靠的群控方案
+- hermes-agent-orange-book（2.9K⭐）— 中文社区在壮大
