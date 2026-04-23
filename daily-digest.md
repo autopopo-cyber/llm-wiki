@@ -85,3 +85,33 @@ Vector OS Nano is the most promising integration target:
 - Skills: 93 total, all valid
 - Cron: active (30min idle loop)
 - Backups: rotated, latest 2026-04-22
+
+
+---
+
+## 2026-04-24 03:48 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- **langflow** (147.3K⭐) — AI agent builder, actively pushed 4/23
+- **dify** (138.9K⭐) — Agentic workflow platform, pushed 4/23
+- **everything-claude-code** (165K⭐) — Claude Code harness with skills/memory
+- **opencode** (148.3K⭐) — Open source coding agent (anomalyco)
+
+### MCP Server Ecosystem
+- **awesome-mcp-servers** (85.4K⭐) — Master list, pushed 4/23
+- **playwright-mcp** (31.3K⭐) — Microsoft's browser automation MCP
+- **github-mcp-server** (29.2K⭐) — GitHub official MCP
+- **fastmcp** (24.8K⭐) — Pythonic MCP server builder (PrefectHQ)
+
+### Robotics / Embodied AI
+- **dimos** (3.1K⭐) 🆕 — **Agentic OS for physical space** — NLP control of humanoids, quadrupeds, drones. SLAM, spatial memory, multi-agent. Python + Nix + Docker. Very relevant to NAV_DOG. [Deep-dive → wiki:dimos-agentic-physical-os]
+- **sesame-robot** (1.6K⭐) 🆕 — ESP32 mini quadruped, open/affordable
+- **xr_teleoperate** (1.4K⭐) — Unitree humanoid teleoperation via XR
+
+### Hermes Releases
+- Latest: v2026.4.16 (v0.10.0) — Tool Gateway release (web search, image gen, TTS, browser for paid subscribers)
+- Previous: v2026.4.13 (v0.9.0) — 487 commits, 269 PRs, 167 issues, 24 contributors
+
+### Key Insight
+dimos represents a new category: "agentic OS for physical space" — it combines navigation, perception, spatial memory, and multi-agent coordination under one framework. This is directly competitive with our ABot-Claw + Auto-Drive integration path. Worth monitoring and potentially integrating.
+
