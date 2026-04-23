@@ -115,3 +115,94 @@ Vector OS Nano is the most promising integration target:
 ### Key Insight
 dimos represents a new category: "agentic OS for physical space" — it combines navigation, perception, spatial memory, and multi-agent coordination under one framework. This is directly competitive with our ABot-Claw + Auto-Drive integration path. Worth monitoring and potentially integrating.
 
+
+---
+
+## Scan 2026-04-24 04:20
+
+### amap-cvlab Ecosystem Update (Key — ABot-Claw upstream)
+- **ABot-World** (7⭐, pushed 4/19) — Real-Time Interactive World Simulation on Single Desktop GPU. NEW repo.
+- **ABot-PhysWorld** (295⭐, pushed 4/16) — Physical world simulation, 295 stars is significant
+- **ABot-Explorer** (4⭐, pushed 4/15) — Exploration module, NEW repo
+- **ABot-Claw** (117⭐, pushed 4/14) — Our integration target, stable
+- **ABot-Manipulation** (470⭐, pushed 3/30) — Manipulation framework, highest stars in org
+- **CE-Nav** (38⭐) — Flow-Guided RL for cross-embodiment local navigation
+- **OmniNav** (129⭐, ICLR 2026) — Unified prospective exploration + VLN framework
+- **ABot-Navigation** (124⭐) — Navigation module
+- **Reasoning-Over-Space** (4⭐, ACL 2026) — Spatial reasoning, NEW
+
+**Insight**: amap-cvlab is building a full embodied AI stack: World simulation → Physics → Navigation → Manipulation → Exploration → Reasoning. ABot-Claw is the agent orchestration layer that sits on top. The ecosystem is maturing fast — 3 new repos in the last week.
+
+### AMAP-EAI (Different org, also AMAP)
+- **SocialNav** (81⭐, pushed 4/21) — Human-inspired foundation model for socially-aware embodied navigation
+- **Nav-R2** (17⭐) — Dual-Relation Reasoning for open-vocabulary object-goal navigation
+
+### Coding Agent Landscape (Stable)
+- deer-flow (63.5K⭐) still leading for multi-agent SuperAgent (ByteDance)
+- claude-mem (66.3K⭐) — memory compression for Claude Code sessions, relevant to our Hindsight work
+- Casdoor (13.5K⭐) — Agent-first IAM + MCP gateway, could replace our planned auth layer
+
+### MCP Ecosystem (Growing)
+- fastmcp (24.8K⭐) becoming the standard Python MCP framework
+- googleapis/mcp-toolbox (14.8K⭐) — Google's official database MCP
+- Casdoor (13.5K⭐) — IAM + MCP gateway + OpenClaw support
+
+### No New Hermes Releases
+- Still at v0.10.0 (2026-04-16)
+
+---
+
+## Scan 2026-04-24 04:20
+
+### amap-cvlab Ecosystem Update (Key - ABot-Claw upstream)
+- **ABot-World** (7 stars, pushed 4/19) - Real-Time Interactive World Simulation on Single Desktop GPU. NEW repo.
+- **ABot-PhysWorld** (295 stars, pushed 4/16) - Physical world simulation
+- **ABot-Explorer** (4 stars, pushed 4/15) - Exploration module, NEW repo
+- **ABot-Claw** (117 stars, pushed 4/14) - Our integration target, stable
+- **ABot-Manipulation** (470 stars, pushed 3/30) - Manipulation framework, highest stars in org
+- **CE-Nav** (38 stars) - Flow-Guided RL for cross-embodiment local navigation
+- **OmniNav** (129 stars, ICLR 2026) - Unified prospective exploration + VLN framework
+- **ABot-Navigation** (124 stars) - Navigation module
+- **Reasoning-Over-Space** (4 stars, ACL 2026) - Spatial reasoning, NEW
+
+**Insight**: amap-cvlab is building a full embodied AI stack: World simulation > Physics > Navigation > Manipulation > Exploration > Reasoning. ABot-Claw is the agent orchestration layer. 3 new repos in the last week.
+
+### AMAP-EAI (Different org, also AMAP)
+- **SocialNav** (81 stars, pushed 4/21) - Human-inspired foundation model for socially-aware embodied navigation
+- **Nav-R2** (17 stars) - Dual-Relation Reasoning for open-vocabulary object-goal navigation
+
+### No New Hermes Releases
+- Still at v0.10.0 (2026-04-16)
+
+
+---
+
+## 2026-04-24 05:00 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- langflow 147K⭐ — visual AI workflow builder (pushed 04-23)
+- dify 139K⭐ — agentic workflow platform (pushed 04-23)
+- langchain 135K⭐ — agent engineering platform (pushed 04-23)
+- hermes-agent 113K⭐ — v0.10.0 still latest (Apr 16)
+- gemini-cli 102K⭐ — Gemini terminal agent (pushed 04-23)
+- browser-use 90K⭐ — web automation for AI agents (pushed 04-21)
+- ragflow 79K⭐ — RAG + Agent engine (pushed 04-23)
+
+### Robotics / Embodied AI
+- Genesis 28.6K⭐ — generative world for robotics (pushed 04-22)
+- LeRobot 23.5K⭐ — HuggingFace end-to-end robot learning (pushed 04-23)
+- openpilot 60.7K⭐ — comma.ai self-driving OS (pushed 04-23)
+- PythonRobotics 29.2K⭐ — robotics algorithm samples (pushed 04-20)
+
+### MCP Servers
+- awesome-mcp-servers 85.4K⭐ — curated MCP server list
+- playwright-mcp 31.3K⭐ — Microsoft Playwright MCP
+- github-mcp-server 29.2K⭐ — GitHub official MCP
+- fastmcp 24.8K⭐ — Pythonic MCP server builder
+- activepieces 21.8K⭐ — AI workflow + ~400 MCP servers
+- mcp-toolbox 14.8K⭐ — Google database MCP server
+
+### Notable Changes Since Last Scan
+- No new Hermes release (v0.10.0 from Apr 16 still latest)
+- activepieces (21.8K⭐) is new — offers ~400 MCP servers, potential integration
+- mcp-toolbox (14.8K⭐) by Google — database MCP, could be useful for Postgres job queue
