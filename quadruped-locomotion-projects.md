@@ -1,4 +1,4 @@
-# Quadruped Locomotion Projects (Scanned 2026-04-23)
+# Quadruped Locomotion Projects (Scanned/Updated 2026-04-23 2026-04-23 12:37)
 
 | Project | Stars | Description | URL |
 |---------|-------|-------------|-----|
@@ -7,6 +7,10 @@
 | basic-locomotion-isaaclab | 68 | IsaacLab multi-quadruped extension (sim-to-sim) | https://github.com/DLR-RM/basic-locomotion-isaaclab |
 | mhflocke | 13 | Biologically grounded embodied cognition for locomotion | https://github.com/nikaus935/mhflocke |
 | terrain-aware-locomotion | 10 | 95% nav success, 50% fall reduction | https://github.com/GaoYuan2022/terrain-aware-locomotion |
+
+
+| isaaclab-anymal-locomotion | 1 | PPO for quadruped locomotion (96% of RSL-RL) | https://github.com/MarGo-20/isaaclab-anymal-locomotion |
+| Quadruped-Locomotion-RL | 1 | RL study for quadruped locomotion | https://github.com/GaganBhusal/Quadruped-Locomotion-Reinforcement-Learning |
 
 ### Relevance to NAV_DOG
 - go2-convex-mpc: Directly applicable — Unitree Go2 MPC controller, MuJoCo sim

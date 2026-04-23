@@ -2,12 +2,15 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-21 | Total pages: 35
+> Last updated: 2026-04-23 | Total pages: 39
 
 ## 📝 深度分析
 
 - [[Claw的启示-从Agent到具身智能的架构统一|Claw 的启示]] — ⭐ VLA 失败→Agent+RL 成功→ABot-Claw 验证→Hermes 映射，架构统一性深度分析（可发表）
 - [[具身智能仿真平台调研]] — 12 个机器人/自动驾驶仿真器全面对比 + 四足导航选型建议
+- [[gbrain-深度分析|GBrain 深度分析]] — ⭐ YC Garry Tan 的 Agent 长期记忆系统：Thin Harness Fat Skills 哲学 + Minions 持久化队列 + Compiled Truth 知识模型 + Skillify 质量体系
+- [[gbrain-移植计划|GBrain 移植计划]] — MCP Sidecar 方案：0 移植 2-4h 部署 → Postgres 升级 → Python 封装融合，14-22h 总计
+- [[上下文衰减与分层记忆架构|上下文衰减与分层记忆]] — ⭐ 衰减是物理定律不是 bug，分层=频率分离，分布式=信噪比分区，模型无关设计原则
 - [[室外障碍物检测-视觉替代与兜底方案]] — 视觉替代与兜底检测方案（取代朗毅未开源权重）
 
 ## 🎯 核心项目：四足机器狗导航系统
