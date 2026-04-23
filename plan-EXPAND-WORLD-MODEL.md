@@ -4,7 +4,7 @@
 
 ## LV.2 — SCAN_SOURCES 🔁
 > 扫描信息源获取新知识
-> [last: 2026-04-24 05:00 | 🔁]
+> [last: 2026-04-24 05:32 | 🔄]
 - LV.3 GitHub trending/相关仓库 [last: 2026-04-24 05:00 | ✅] → deer-flow 63.5K(ByteDance SuperAgent), claude-mem 66.3K, Genesis 28.6K(embodied AI), LeRobot 23.5K(HuggingFace), Vector OS Nano(CMU RI, MCP-native Go2), mujoco_mpc_deploy 127⭐(Go2 hardware), casdoor 13.5K(Agent IAM+MCP) | NEW: amap-cvlab ecosystem expanding fast (ABot-World 7⭐, ABot-PhysWorld 295⭐, ABot-Explorer 4⭐, ABot-Manipulation 470⭐), SocialNav 81⭐(AMAP-EAI)
 - LV.3 arXiv 相关论文 [last: 2026-04-24 05:00 | ✅]
 - LV.3 技术博客/RSS [last: 2026-04-24 05:00 | ✅]
