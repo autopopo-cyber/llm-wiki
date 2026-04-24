@@ -389,3 +389,29 @@ Vector OS Nano is the most promising integration target:
 - 98 skills (all valid), cron active
 - Wiki: 15 files committed and pushed
 
+
+## 2026-04-24 23:08 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- **langflow** 147K⭐ — visual agent workflow builder (pushed 4/24)
+- **dify** 139K⭐ — agentic workflow platform (pushed 4/24)
+- **hermes-agent** 114.7K⭐ — v0.11.0 released (pushed 4/24)
+- **gemini-cli** 102K⭐ — Google Gemini terminal agent (pushed 4/24)
+- **browser-use** 90K⭐ — web automation for AI agents (pushed 4/21)
+
+### MCP Servers
+- **awesome-mcp-servers** 85.5K⭐ — comprehensive MCP server collection
+- **playwright-mcp** 31.4K⭐ — Playwright browser MCP
+- **github-mcp-server** 29.2K⭐ — GitHub official MCP
+- **fastmcp** 24.8K⭐ — fast Python MCP framework
+- **activepieces** 21.9K⭐ — AI workflow automation with ~400 MCP servers
+
+### Embodied AI / Robotics
+- **Genesis** 28.6K⭐ — generative world for robotics/embodied AI
+- **RLinf** 3.2K⭐ — RL infrastructure for embodied & agentic AI
+- **Embodied_AI_Paper_List** 2K⭐ — NEW: comprehensive survey papers (added to wiki)
+- **Awesome-Embodied-Robotics-and-Agent** 1.8K⭐ — curated list
+- **every-embodied** 1.6K⭐ — VLA/OpenVLA tutorial
+
+### Hermes Releases
+- **v0.11.0** (2026-04-23) — 1,556 commits, 761 PRs, 224K insertions, 29 community contributors
