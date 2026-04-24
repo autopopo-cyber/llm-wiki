@@ -1,3 +1,30 @@
+## 2026-04-24 17:32 — Idle Loop Digest
+
+### 🔔 Hermes v0.11.0 Released (2026-04-23)
+- **Huge release**: 1,556 commits, 761 PRs, 29 community contributors
+- New Ink-based TUI (`hermes --tui`) — React/Ink rewrite with streaming, status bar
+- Pluggable transport architecture — AnthropicTransport, ChatCompletionsTransport, BedrockTransport
+- 5 new inference paths: NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway
+- **GPT-5.5 via Codex OAuth** — new reasoning model, live model discovery
+- QQBot (17th platform adapter)
+- ⚠️ **Current version: v0.10.0** — 1,217 commits behind. Needs user approval to update.
+
+### 🤖 Notable AI Agent Repos
+- **deer-flow** (63K⭐) — SuperAgent harness: research+code+create with sandboxes+memories. New mover.
+- **claude-mem** (66K⭐) — Auto-captures Claude Code sessions, LLM compression. Memory tool.
+- **openai-agents-python** (24.9K⭐) — Lightweight multi-agent framework from OpenAI.
+
+### 🐕 Quadruped Robotics
+- **MGDP** (84⭐, Adv. Sci. 2026) — Generalized Depth Perception for Quadruped Locomotion
+- **go2-convex-mpc** (96⭐) — Convex MPC controller for Unitree Go2 in MuJoCo — directly relevant to NAV_DOG
+- **basic-locomotion-isaaclab** (68⭐) — IsaacLab extension, sim-to-real for quadrupeds
+- **Awesome-Quadruped-with-Manipulator** (74⭐) — Curated papers for quadruped+manipulator
+
+### 🧹 System Maintenance
+- Killed 31 orphan MemOS bridge processes (reclaimed ~1GB RAM)
+- Cleaned old backups (268MB → 23.4MB)
+- Added orphan process cleanup to HEALTH_CHECK wiki
+
 # Daily Digest — 2026-04-24
 
 ## Agent Ecosystem Updates
@@ -196,3 +223,22 @@ Vector OS Nano is the most promising integration target:
 - Hermes v0.11.0: 1,556 commits, 761 merged PRs, 22 community contributors
 - No significant new quadruped/locomotion repos this period
 - MCP ecosystem still growing rapidly (activepieces with 400+ MCPs)
+
+---
+
+## 2026-04-24 16:48 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- Langflow 147K⭐, Dify 139K⭐, Hermes 114K⭐, awesome-llm-apps 107K⭐, gemini-cli 102K⭐, browser-use 90K⭐
+- Coding agents: everything-claude-code 166K⭐, opencode 149K⭐, claude-code 117K⭐, codex 78K⭐
+- Hermes v0.11.0 released 2026-04-23 (v2026.4.23): Transport ABC (A2A), Ink TUI, AWS Bedrock, plugin expansion. 1556 commits since v0.9.0.
+
+### MCP Servers
+- awesome-mcp-servers 85K⭐, playwright-mcp 31K⭐, github-mcp-server 29K⭐, fastmcp 25K⭐, activepieces 22K⭐
+
+### Robotics
+- towr 1053⭐ (ETHz trajectory optimization), dial-mpc 962⭐ (diffusion MPC), rl-mpc-locomotion 961⭐ (RL+MPC), spot_mini_mini 921⭐ (Bezier gait)
+
+### Action Items
+- HERMES_UPGRADE v0.11.0 still pending user decision
+- No newrepos warranting skill creation

@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent 维护知识
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-24
 type: concept
 tags: [open-source, tutorial, maintenance]
 sources: [deploy-guide.md, session-2026-04-19]
@@ -118,6 +118,82 @@ tail -f ~/.hindsight/profiles/hermes.log
 
 # 检查端口占用
 ss -tlnp | grep -E "8642|8648|9177"
+```
+
+## Gateway 频繁崩溃与 WebUI 不可用分析 (2026-04-24)
+
+> 症状：WebUI 间歇性报"gateway 不可用"，刷新后有时恢复。
+> 根因：gateway 一天内重启 10 次，重启期间 WebUI 连接全部中断。
+
+### 崩溃时间线
+
+```
+11:18  TEMPFAIL (exit 75) — 启动时端口被旧进程占用
+12:07  FAILURE (exit 1)    — 主进程异常退出
+12:10  手动重启
+12:13  FAILURE (exit 1)    — 主进程异常退出
+12:29  SIGKILL (python+bash+sleep) — systemd 超时强杀
+12:37  SIGKILL (timeout, 含1个node子进程) — 优雅退出失败
+13:14  FAILURE (exit 1, 杀3个node进程)
+13:46  FAILURE (exit 1, 杀8个node进程!)
+14:40  SIGKILL (timeout, 杀6个node进程)
+15:05  SIGKILL (timeout, 杀1个python进程)
+```
+
+### 三个叠加的根因
+
+**1. MemOS bridge.cjs 子进程泄漏（最严重）**
+
+- 每次 cron job（idle loop 每30分钟）或 API 请求触发 MemOS 插件时，fork 新 bridge.cjs 子进程
+- 用完后不回收，进程持续累积
+- 当前积压 **26 个 bridge.cjs 进程，占约 2.3GB 内存**
+- 崩溃时 systemd 杀死的 node 子进程数量随时间递增（1→3→8→6），说明泄漏持续
+- 内存压力最终导致 gateway 主进程卡死或 OOM
+
+**2. session_search summarization 模型 403 错误**
+
+- 今天 17 次 "Session summarization failed after 3 attempts: Error code: 403 — This model is not available in your region"
+- summarization 用的模型有地区限制（可能是 deepseek-v3.2 或其他模型）
+- 每次失败重试 3 次，期间可能阻塞 event loop
+
+**3. Gateway 无法优雅退出**
+
+- 多次 "stop-sigterm timed out" → SIGKILL
+- bridge.cjs 子进程不响应 SIGTERM
+- pending 的 aiohttp session 未关闭
+- 导致 systemd 等待超时后强杀，加剧重启延迟
+
+### WebUI 报错的直接原因
+
+Gateway 重启期间（通常 30s 内）：
+1. WebUI 的所有 HTTP 长连接被 reset → ECONNRESET
+2. Gateway 重启后需重新初始化（加载配置、连接插件、启动 bridge），新请求会超时
+3. 恰好在重启窗口内访问 WebUI → 看到"gateway 不可用"
+
+### 待修复方向
+
+| 优先级 | 修复 | 说明 |
+|--------|------|------|
+| P0 | bridge.cjs 进程回收 | MemOS 插件请求完成后主动关闭子进程，或 gateway 侧加子进程生命周期管理 |
+| P1 | summarization 模型替换 | 换无地区限制的模型（如 qwen 系列）做 session_search summarization |
+| P1 | gateway 优雅退出 | SIGTERM handler 先杀所有子进程；增大 TimeoutStopSec |
+| P2 | WebUI 侧重试 | 对 gateway 请求加短暂重试（1-2次，间隔1s），掩盖重启窗口 |
+
+### 快速诊断命令
+
+```bash
+# 检查 bridge.cjs 进程泄漏
+ps aux | grep bridge.cjs | grep -v grep | wc -l
+# 如果 > 5，说明有泄漏，需手动清理：pkill -f bridge.cjs
+
+# 检查 gateway 今日重启次数
+journalctl --user -u hermes-gateway --since today | grep 'Started hermes-gateway' | wc -l
+
+# 检查 summarization 403 错误
+journalctl --user -u hermes-gateway --since today | grep 'summarization failed' | wc -l
+
+# 紧急清理所有泄漏的 bridge 进程
+pkill -f bridge.cjs && systemctl --user restart hermes-gateway
 ```
 
 ## 相关页面

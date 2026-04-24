@@ -34,3 +34,9 @@
 - 来源：deploy-guide.md、hermes-maintenance.md、Hermes-plan-机制调研与OpenClaw对比.md、tree-plan skill、llm-wiki skill
 - index.md 更新：Total pages 35，Infrastructure 区新增条目
 - tree-plan 更新：Hindsight 修复→已完成，minimax→已取消，新增文档任务→当前正在处理
+
+## [2026-04-24] update | hermes-maintenance — Gateway 崩溃分析
+- 新增"Gateway 频繁崩溃与 WebUI 不可用分析"章节
+- 三个根因：MemOS bridge.cjs 子进程泄漏(26进程/2.3GB)、summarization 模型 403 错误(17次)、gateway 无法优雅退出
+- 含崩溃时间线、待修复方向(P0-P2)、快速诊断命令
+- 来源：journalctl gateway 日志分析 (2026-04-24)
