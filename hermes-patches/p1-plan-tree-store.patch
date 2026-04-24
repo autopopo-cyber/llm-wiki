@@ -1,0 +1,154 @@
+*** Begin Patch
+*** Update File: plan_tree.py
+@@ new file @@
++"""PlanTree — 仙秦帝国任务调度中枢
++
++提供持久化的计划树存储、优先级调度、断点续作。
++与 SessionDB 共用 SQLite 连接，但逻辑表隔离。
++"""
++
++import json
++import time
++import uuid
++from typing import Dict, List, Optional
++
++try:
++    from hermes_state import SessionDB
++except Exception:
++    SessionDB = None  # type: ignore
++
++
++class PlanTreeStore:
++    """包装 SessionDB，提供 plan-tree 读写接口。"""
++
++    def __init__(self, db: "SessionDB" = None):
++        self._db = db
++        if self._db is None:
++            try:
++                self._db = SessionDB()
++            except Exception:
++                self._db = None
++
++    # ── 节点操作 ──
++    def create_node(
++        self,
++        session_id: str,
++        goal: str,
++        context: str = "",
++        parent_id: str = None,
++        priority: int = 0,
++    ) -> str:
++        node_id = f"node_{uuid.uuid4().hex[:12]}"
++        if self._db:
++            try:
++                self._db.append_task_progress(
++                    session_id=session_id,
++                    task_id=session_id,
++                    node_id=node_id,
++                    status="pending",
++                    metadata={
++                        "goal": goal,
++                        "context": context,
++                        "parent_id": parent_id,
++                        "priority": priority,
++                    },
++                )
++            except Exception:
++                pass
++        return node_id
++
++    def get_next_node(self, session_id: str) -> Optional[dict]:
++        """返回最高优先级的 pending 节点。"""
++        if not self._db:
++            return None
++        try:
++            rows = self._db.get_pending_task_nodes(session_id)
++            if not rows:
++                return None
++            top = rows[0]
++            metadata = json.loads(top.get("metadata") or "{}")
++            return {
++                "id": top["node_id"],
++                "status": top["status"],
++                "goal": metadata.get("goal", ""),
++                "context": metadata.get("context", ""),
++                "parent_id": metadata.get("parent_id"),
++                "priority": metadata.get("priority", 0),
++            }
++        except Exception:
++            return None
++
++    def mark_node_in_progress(self, session_id: str, node_id: str):
++        if self._db:
++            try:
++                self._db.append_task_progress(
++                    session_id,
++                    task_id=session_id,
++                    node_id=node_id,
++                    status="in_progress",
++                    progress_pct=0.0,
++                )
++            except Exception:
++                pass
++
++    def update_node_progress(
++        self,
++        session_id: str,
++        node_id: str,
++        progress_pct: float,
++        result_summary: str = None,
++    ):
++        if self._db:
++            try:
++                self._db.append_task_progress(
++                    session_id,
++                    task_id=session_id,
++                    node_id=node_id,
++                    status="in_progress",
++                    progress_pct=progress_pct,
++                    result_summary=result_summary,
++                )
++            except Exception:
++                pass
++
++    def mark_node_completed(
++        self,
++        session_id: str,
++        node_id: str,
++        result_summary: str = None,
++    ):
++        if self._db:
++            try:
++                self._db.append_task_progress(
++                    session_id,
++                    task_id=session_id,
++                    node_id=node_id,
++                    status="completed",
++                    progress_pct=1.0,
++                    result_summary=result_summary,
++                )
++            except Exception:
++                pass
++
++    def mark_node_blocked(
++        self,
++        session_id: str,
++        node_id: str,
++        reason: str = None,
++    ):
++        if self._db:
++            try:
++                self._db.append_task_progress(
++                    session_id,
++                    task_id=session_id,
++                    node_id=node_id,
++                    status="blocked",
++                    result_summary=reason,
++                )
++            except Exception:
++                pass
++
++    def flush_node_progress(self, session_id: str):
++        """强制刷新（当前实现无缓冲，直接通过 _db 写入）。"""
++        pass
+*** End Patch

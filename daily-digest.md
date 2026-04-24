@@ -415,3 +415,33 @@ Vector OS Nano is the most promising integration target:
 
 ### Hermes Releases
 - **v0.11.0** (2026-04-23) — 1,556 commits, 761 PRs, 224K insertions, 29 community contributors
+
+
+---
+
+## 2026-04-24 23:43 — Idle Loop Scan
+
+### AI Agents (GitHub)
+- langflow (147K⭐) — AI-powered agents and workflows
+- dify (139K⭐) — Production-ready agentic workflow platform
+- system-prompts-and-models-of-ai-tools (136K⭐) — Full prompts from Cursor, Devin, Manus, etc.
+- hermes-agent (115K⭐) — v0.11.0 released 2026-04-23
+- awesome-llm-apps (107K⭐) — 100+ AI Agent & RAG apps
+- gemini-cli (102K⭐) — Google's terminal AI agent
+
+### MCP Servers (GitHub)
+- playwright-mcp (31K⭐) — Microsoft's Playwright MCP server
+- github-mcp-server (29K⭐) — GitHub official MCP
+- fastmcp (25K⭐) — Pythonic MCP server builder
+- mcp-toolbox (15K⭐) — Google's database MCP server
+
+### Embodied AI (GitHub) 🆕
+- Genesis (29K⭐) — Generative world for robotics & embodied AI
+- FluxVLA (296⭐) — All-in-one VLA engineering platform 🔥 NAV_DOG relevant
+- rosclaw (46⭐) — OS-level framework for LLM+ROS/VLA control 🔥 NAV_DOG relevant
+- agent-ros-bridge (14⭐) — Universal ROS1/ROS2 bridge for AI agents
+
+### System Status
+- Disk: 17% used | RAM: 1.8/7.5Gi | Load: 0.06 | Uptime: 5d
+- MemOS orphans: 11 (~1GB) — gateway restart needed
+- Skills: 100 | Backup: current | Cron: active

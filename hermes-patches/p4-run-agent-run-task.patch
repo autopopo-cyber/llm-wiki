@@ -1,0 +1,88 @@
+*** Begin Patch
+*** Update File: run_agent.py
+@@ def chat(self, message: str, stream_callback: Optional[callable] = None) -> str: @@
++    def run_task(
++        self,
++        task_node: dict,
++        system_message: str = None,
++        conversation_history: List[Dict[str, Any]] = None,
++        stream_callback: Optional[callable] = None,
++    ) -> Dict[str, Any]:
++        """
++        单任务循环入口：只处理一个 plan-tree 节点，完成后立即返回。
++
++        Args:
++            task_node: plan-tree 节点 dict，含 id / goal / context / parent_id / priority
++            system_message: 自定义 system prompt
++            conversation_history: 前置消息历史
++            stream_callback: 流式回调
++
++        Returns:
++            与 run_conversation 同样的 result dict，附加 plan_node_id / plan_node_completed
++        """
++        node_id = task_node.get("id", "unknown")
++        goal = task_node.get("goal", "")
++        context = task_node.get("context", "")
++
++        # 注入 plan-node 上下文到 system prompt
++        node_context = (
++            f"[Current Task Node: {node_id}]\n"
++            f"Goal: {goal}\n"
++            f"Context: {context}\n\n"
++            f"Rules:\n"
++            f"- Focus ONLY on this task node.\n"
++            f"- When finished, include [TASK_COMPLETE] in your response.\n"
++            f"- Do NOT start working on unrelated items.\n"
++        )
++        effective_system = (system_message or "")
++        if effective_system:
++            effective_system = effective_system + "\n\n" + node_context
++        else:
++            effective_system = node_context
++
++        # 构造用户消息
++        user_prompt = (
++            f"Execute plan node '{node_id}': {goal}\n"
++            f"Additional context: {context}\n\n"
++            f"Work on this single task. Signal completion with [TASK_COMPLETE]."
++        )
++
++        # 调用现有 run_conversation
++        result = self.run_conversation(
++            user_message=user_prompt,
++            system_message=effective_system,
++            conversation_history=conversation_history,
++            stream_callback=stream_callback,
++        )
++
++        # 任务完成后：强制 flush 所有状态
++        self._persist_session(result.get("messages", []), conversation_history)
++
++        # 如果启用了 plan-tree，标记节点完成
++        if self._plan_tree_store:
++            try:
++                self._plan_tree_store.mark_node_completed(
++                    session_id=self.session_id,
++                    node_id=node_id,
++                    result_summary=result.get("final_response", "")[:500],
++                )
++            except Exception as e:
++                logger.warning("Plan-tree node completion mark failed: %s", e)
++
++        result["plan_node_id"] = node_id
++        result["plan_node_completed"] = True
++        return result
++
+     def chat(self, message: str, stream_callback: Optional[callable] = None) -> str:
+         """
+         Simple chat interface that returns just the final response.
+*** End Patch
+
+*** Begin Patch
+*** Update File: run_agent.py
+@@ self._session_db = session_db @@
+         self._session_db = session_db
++
++        # Plan-tree store (optional — when present, enables single-task-loop mode)
++        self._plan_tree_store = kwargs.get("plan_tree_store") if kwargs else None
+*** End Patch
