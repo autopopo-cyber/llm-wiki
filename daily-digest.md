@@ -706,3 +706,25 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 
 ### System Health
 - MemOS bridge orphans: 7 processes (~630MB) — scheduled gateway restart for cleanup
+
+## 2026-04-25 06:53 — Cron Sweep
+
+### AI Agent Ecosystem
+- Top: JavaGuide 155K, Langflow 147K, Dify 139K, Langchain 135K, Hermes 115K
+- Coding agents: everything-claude-code 166K (harness optimization), opencode 149K, claude-code 118K, codex 78K
+- claude-mem 67K — auto-capture plugin for Claude Code, relevant to our memory architecture
+
+### MCP Ecosystem
+- awesome-mcp-servers 86K, playwright-mcp 31K, github-mcp-server 29K, fastmcp 25K
+- mcp-toolbox 15K (Google, database MCP), Figma-Context-MCP 15K
+- activepieces 22K — 400+ MCP servers for AI agents, workflow automation
+
+### Hermes
+- v0.11.0 (v2026.4.23) still latest — 1,556 commits, 761 PRs, 224K insertions since v0.9.0
+- We are on v0.10.0, 1363 commits behind — upgrade pending user approval
+
+### Robotics / Quadruped
+- go2-convex-mpc 96 stars — Convex MPC controller for Unitree Go2 in MuJoCo (directly relevant)
+- MGDP 87 stars — Generalized Depth Perception for quadruped (Adv. Sci. 2026)
+- basic-locomotion-isaaclab 68 stars — IsaacLab extension for multi-quadruped locomotion
+- mhflocke 13 stars — Biologically grounded embodied cognition for quadruped locomotion
