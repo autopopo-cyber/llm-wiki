@@ -164,3 +164,35 @@ Vector OS Nano is the most promising integration target:
 - Hermes v0.11.0 introduces pluggable transports and Ink TUI — relevant for A2A integration architecture
 - CVPR 2026 World Model track with ABot-PhysWorld leaderboard suggests AMAP CV Lab is pushing hard on embodied world models — could accelerate ABot-Claw ecosystem
 - claude-mem (66K⭐) validates the "capture everything" approach similar to our Hindsight + MemOS stack
+
+---
+
+## 2026-04-24 16:13 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- **Langflow** 147.3K⭐ — visual agent builder, pushed 2026-04-24
+- **Dify** 139K⭐ — production agentic workflow platform
+- **Hermes Agent** 114K⭐ — v0.11.0 released 2026-04-23 (Interface release: Ink TUI rewrite, pluggable transport, AWS Bedrock)
+- **awesome-llm-apps** 107.3K⭐ — 100+ runnable agent/RAG apps
+
+### Coding Agents
+- **everything-claude-code** 165.7K⭐ — agent harness optimization
+- **opencode** 148.6K⭐ — open source coding agent
+- **claude-code** 117.5K⭐ — Anthropic's terminal coding tool
+- **codex** 77.5K⭐ — OpenAI lightweight coding agent
+
+### Embodied AI / Robotics
+- **Genesis** 28.6K⭐ — generative world for robotics/embodied AI
+- **RLinf** 3.2K⭐ — RL infrastructure for embodied & agentic AI
+- **awesome-embodied-vla-va-vln** 3K⭐ — VLA/VLN research
+
+### MCP Servers
+- **awesome-mcp-servers** 85.5K⭐ — collection of MCP servers
+- **playwright-mcp** 31.3K⭐ — Microsoft Playwright MCP server
+- **fastmcp** 24.8K⭐ — Pythonic MCP server builder
+- **activepieces** 21.8K⭐ — AI agents + MCP + workflow automation (~400 MCP servers)
+
+### Notable Changes Since Last Scan
+- Hermes v0.11.0: 1,556 commits, 761 merged PRs, 22 community contributors
+- No significant new quadruped/locomotion repos this period
+- MCP ecosystem still growing rapidly (activepieces with 400+ MCPs)
