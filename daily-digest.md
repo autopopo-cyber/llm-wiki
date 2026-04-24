@@ -445,3 +445,25 @@ Vector OS Nano is the most promising integration target:
 - Disk: 17% used | RAM: 1.8/7.5Gi | Load: 0.06 | Uptime: 5d
 - MemOS orphans: 11 (~1GB) — gateway restart needed
 - Skills: 100 | Backup: current | Cron: active
+
+## 2026-04-25 01:00 — Idle Loop Scan
+
+### AI Agents
+- Hermes Agent 114.8K⭐ (v0.11.0 released 2026-04-23)
+- deer-flow 63.7K⭐ (ByteDance SuperAgent)
+- claude-mem 66.9K⭐ (auto-capture Claude Code sessions)
+- everything-claude-code 166K⭐ (agent harness optimization)
+
+### Embodied AI
+- Genesis 28.6K⭐ (generative world for robotics)
+- FluxVLA 296⭐ (VLA engineering platform)
+- **VectorClaw 13⭐ (NEW)** — Anki Vector + OpenClaw MCP integration, validates MCP→robot bridge pattern
+
+### MCP Servers
+- awesome-mcp-servers 85.5K⭐
+- playwright-mcp 31.4K⭐
+- fastmcp 24.8K⭐
+
+### Key Observation
+MCP protocol is becoming the de facto standard for AI→robot communication. VectorClaw (OpenClaw+MCP for Anki Vector) confirms this pattern. Our ABot-Claw + Auto-Drive architecture is aligned with this trend.
+
