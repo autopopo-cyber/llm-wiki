@@ -294,3 +294,33 @@ Vector OS Nano is the most promising integration target:
 - HY-Embodied 652⭐ (embodied foundation models)
 - loco-mujoco 1.4K⭐ (locomotion imitation learning benchmark, pushed 4/23)
 
+
+---
+
+## 2026-04-24 20:37 — Idle Loop Sweep
+
+### AI Agent Ecosystem
+- **Hermes Agent v0.11.0** (114K⭐) — Interface release: Ink TUI, Bedrock, GPT-5.5, QQBot, plugin surface
+- **Langflow** 147K⭐, **Dify** 139K⭐, **Langchain** 135K⭐ — all active
+- **browser-use** 90K⭐ — web automation for agents
+- **Gemini CLI** 102K⭐ — Google's terminal agent
+
+### Embodied AI / Robotics
+- **Genesis** 28.6K⭐ — generative world for robotics & embodied AI (active, pushed today)
+- **FluxVLA** 295⭐ — all-in-one VLA engineering platform, data→real-robot (NEW, pushed 4/23)
+- **VectorClaw** 13⭐ — Anki Vector + OpenClaw MCP integration (NEW, pushed 4/21) — relevant to our MCP + robotics path
+- **Awesome-Embodied-Robotics-and-Agent** 1.8K⭐ — curated list, good reference
+
+### MCP Servers
+- **awesome-mcp-servers** 85.5K⭐ — master list
+- **playwright-mcp** 31.3K⭐ — Microsoft Playwright MCP
+- **github-mcp-server** 29.2K⭐ — official GitHub MCP
+- **fastmcp** 24.8K⭐ — Pythonic MCP framework
+- **mcp-toolbox** 14.8K⭐ — Google's MCP for databases
+- **activepieces** 21.9K⭐ — 400+ MCP servers, workflow automation
+
+### System Status
+- Disk: 17%, RAM: 2.1/7.5Gi, Load: 0.38, Uptime: 5d9h
+- MemOS orphans: 9 killed, ~400MB recovered
+- Gateway running, PostgreSQL running
+- 97 skills, all valid
