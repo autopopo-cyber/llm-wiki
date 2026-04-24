@@ -363,17 +363,29 @@ Vector OS Nano is the most promising integration target:
 - 97 skills, all valid
 - Cron active: autonomous-drive-idle-loop every 30m
 
-
-### Incremental Update — 2026-04-24 21:52
+### Incremental Update — 2026-04-24 22:33
 
 #### New Findings
-- **datawhalechina/every-embodied** (1,573⭐) — Chinese tutorial: build embodied AI robot from scratch with Python, covers VLA/OpenVLA/SmolVLA/Pi0. **Directly relevant to NAV_DOG**: practical VLA implementation guide.
-- **Genesis** (28,572⭐) — Generative world for robotics & embodied AI learning. Simulation platform that could accelerate NAV_DOG software validation phase.
+- **MarcHesse/mhflocke** (13⭐) — Biologically Grounded Embodied Cognition for Quadruped Locomotion Learning. New repo (created 2026-03-28). Directly relevant to NAV_DOG quadruped locomotion research.
+- **Awesome-RL-VLA** (646⭐) — Survey on RL of VLA models for robotic manipulation. Key reference for ABot-Claw reproduction.
+- **VITRA** (358⭐) — ICRA 2026, scalable VLA pretraining from real-life human activity videos.
+- **MemoryVLA** (216⭐) — ICLR 2026, perceptual-cognitive memory in VLA models. Memory-augmented VLA could improve ABot-Claw VLAC loop.
+- **VLA-Handbook** (162⭐) — Chinese VLA handbook for robotics engineers. Practical reference for our Chinese-speaking team.
+- **InternVLA-A1** (4⭐) — End-to-end VLA for dynamic environments. Early but interesting.
+
+#### Hermes v0.11.0 Released (2026-04-23)
+- **New Ink-based TUI** (`hermes --tui`) — React/Ink rewrite with streaming, status bar, subagent observability
+- **Transport ABC** — Pluggable transport layer: Anthropic, ChatCompletions, ResponsesApi, Bedrock. Makes A2A gateway integration easier.
+- **5 new inference paths** — NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway
+- **GPT-5.5 via Codex OAuth** — New OpenAI reasoning model with live model discovery
+- **QQBot** (17th platform) — Native QQ adapter with QR setup wizard
+- **Plugin surface expanded** — register_command, dispatch_tool, pre_tool_call veto, rewrite tool results
+- **1,556 commits, 761 PRs, 224K insertions** since v0.9.0 — massive release
 
 #### System Status
-- Disk: 17%, RAM: 1.7/7.5Gi (effective after orphan cleanup), Load: 0.20, Uptime: 5d10h
-- MemOS orphans: 2 (within tolerance)
-- Backup: hermes-backup-20260424-2149.tar.gz (52K), rotation verified
-- 97 skills, all valid
-- Cron active: autonomous-drive-idle-loop every 30m
+- Disk: 18%, RAM: 2.2/7.5Gi (30%), Load: 0.12, Uptime: 5d10h
+- MemOS orphans: 0 (cleaned 11, SIGKILL + gateway restart needed)
+- Backup: hermes-backup-20260424-2230.tar.gz, rotation verified
+- 98 skills (all valid), cron active
+- Wiki: 15 files committed and pushed
 
