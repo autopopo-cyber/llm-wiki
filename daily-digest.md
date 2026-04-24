@@ -1,3 +1,53 @@
+---
+
+## 2026-04-25 04:04 — Idle Loop Scan
+
+### Hermes Agent v0.11.0 Released (2026-04-23)
+Major "Interface" release — 1,556 commits, 761 PRs, 29 community contributors.
+Key highlights for our setup:
+- **Ink-based TUI** (`hermes --tui`) — full React/Ink rewrite
+- **Transport ABC** — pluggable transport layer (Anthropic/ChatCompletions/ResponsesAPI/Bedrock)
+- **GPT-5.5 over Codex OAuth** — live model discovery
+- **QQBot** — 17th platform (QR scan config, Chinese market)
+- **`/steer`** — mid-run agent nudges without interrupting turns
+- **Smarter delegation** — `orchestrator` role, `max_spawn_depth`, file-coordination for concurrent siblings
+- **Plugin surface** — `dispatch_tool`, `pre_tool_call` veto, `transform_tool_result`, `register_command`
+- **Shell hooks** — lifecycle hooks via shell scripts (no Python plugin needed)
+- **Dashboard plugin system + i18n** (EN + CN)
+- **Webhook direct-delivery mode** — zero-LLM push notifications
+- **Auxiliary models** — per-task overrides, main-model-first routing
+- New providers: NVIDIA NIM, Arcee AI, Step Plan, Vercel ai-gateway, Kimi K2.6, Xiaomi MiMo v2.5
+
+### AI Agent Ecosystem (Top by Stars)
+| Project | Stars | Notes |
+|---------|-------|-------|
+| JavaGuide | 155K | Java + AI interview guide |
+| Langflow | 147K | AI agent builder |
+| Dify | 139K | Agentic workflow platform |
+| System Prompts DB | 136K | AI tool system prompts |
+| LangChain | 135K | Agent engineering platform |
+| **Hermes Agent** | **115K** | **Our platform ↑** |
+| Awesome LLM Apps | 107K | 100+ agent apps |
+| Gemini CLI | 102K | Google's CLI agent |
+
+### MCP Ecosystem
+| Project | Stars | Notes |
+|---------|-------|-------|
+| awesome-mcp-servers | 86K | Collection |
+| playwright-mcp | 31K | Microsoft browser MCP |
+| github-mcp-server | 29K | Official GitHub MCP |
+| fastmcp | 25K | Pythonic MCP framework |
+| activepieces | 22K | 400+ MCP servers |
+
+### System Health
+- Disk: 19% used, 93G free
+- RAM: 1.5/7.5Gi (20%)
+- Load: 0.18
+- Uptime: 5d16h
+- MemOS orphans: 3 (gateway restart scheduled)
+- Skills: 100 total, 5 sampled — all valid
+- Backup: created and rotated
+
 ## 2026-04-24 17:32 — Idle Loop Digest
 
 ### 🔔 Hermes v0.11.0 Released (2026-04-23)
