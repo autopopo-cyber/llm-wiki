@@ -335,3 +335,66 @@ dimos represents a new category: "agentic OS for physical space" — it combines
 - opencode 148K continues rapid growth as open-source coding agent
 - MCP ecosystem still expanding fast (fastmcp + activepieces as frameworks)
 - No new Hermes release since v0.11.0
+
+---
+
+## 2026-04-24 09:12 — Idle Loop Scan
+
+### Hermes Agent v0.11.0 Released (2026-04-23)
+Key changes for Auto-Drive:
+- **Transport ABC** — pluggable transport layer. Format conversion extracted from run_agent.py. Implications: custom transports possible, easier A2A integration.
+- **Ink TUI** — `hermes --tui` React/Ink rewrite. Subagent spawn observability overlay (useful for monitoring idle-loop spawned subagents).
+- **AWS Bedrock native** — new inference path via Converse API.
+- **GPT-5.5 via Codex OAuth** — new reasoning model available.
+- **Plugin surface expansion** — more hooks for Auto-Drive integration.
+- **5 new inference paths** — NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway.
+- **QQBot adapter** — 17th platform.
+
+### Ecosystem Scan
+**Top AI Agent Projects (by stars)**:
+- langflow (147K⭐) — agent workflow builder
+- dify (139K⭐) — agentic workflow platform  
+- langchain (135K⭐) — agent engineering platform
+- hermes-agent (113K⭐) — the agent that grows with you
+- gemini-cli (102K⭐) — Gemini terminal agent
+
+**Hot Coding Agents (recent push)**:
+- claude-mem (66K⭐) — Claude Code auto-memory plugin
+- opencode (148K⭐) — open source coding agent
+
+**MCP Servers Trending**:
+- playwright-mcp (31K⭐) — Microsoft Playwright MCP
+- github-mcp-server (29K⭐) — GitHub official MCP
+- fastmcp (25K⭐) — Pythonic MCP framework
+- mcp-toolbox (15K⭐) — Google database MCP
+
+### Action Items
+- ⏳ HERMES_V0.11_UPGRADE — evaluate upgrade path (Transport ABC is relevant for A2A)
+- ⏳ AUTONOMOUS_DRIVE_SPEC_REPO — still needs GitHub auth
+---
+
+## 2026-04-24 09:51 — Idle Loop Scan
+
+### Hermes v0.11.0 Released (Apr 23)
+- **Ink-based TUI** — `hermes --tui` with React/Ink rewrite, JSON-RPC backend, streaming, subagent overlay
+- **Transport ABC** — Pluggable transport layer: Anthropic, ChatCompletions, ResponsesApi, Bedrock
+- **5 New Inference Paths** — NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway
+- **GPT-5.5 over Codex OAuth** — live model discovery from OpenAI without catalog updates
+- **QQBot** — 17th messaging platform
+- **Tool Gateway** (v0.10.0) — deferrred features folded in
+- 1,556 commits, 761 PRs, 224K insertions, 224+ contributors since v0.9.0
+- **Notable**: No A2A/swarm mentions yet in this release
+
+### AI Agent Ecosystem
+- Top agents: langflow (147K*), dify (139K*), hermes-agent (113K*)
+- Coding agents: everything-claude-code (165K*), opencode (148K*), claude-code (117K*), codex (77K*)
+- claude-mem (67K*) — auto-capture plugin for Claude Code (relevant to our memory work)
+
+### MCP Servers Trending
+- awesome-mcp-servers (85K*), playwright-mcp (31K*), github-mcp-server (29K*)
+- fastmcp (25K*) — Pythonic MCP server builder
+- activepieces (22K*) — 400+ MCP servers for agents
+- googleapis/mcp-toolbox (15K*) — database MCP server
+
+### Key Takeaway
+Hermes v0.11.0 is a massive release focused on transport abstraction and UI. The pluggable transport layer could simplify our A2A integration. GPT-5.5 support via Codex OAuth is notable for multi-model orchestration.
