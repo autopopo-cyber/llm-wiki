@@ -467,3 +467,27 @@ Vector OS Nano is the most promising integration target:
 ### Key Observation
 MCP protocol is becoming the de facto standard for AI→robot communication. VectorClaw (OpenClaw+MCP for Anki Vector) confirms this pattern. Our ABot-Claw + Auto-Drive architecture is aligned with this trend.
 
+
+
+---
+
+## 2026-04-25 01:38 — Idle Loop Scan
+
+### AI Agents
+- Hermes v0.11.0 (released 2026-04-23) — 1,556 commits since v0.9.0
+- everything-claude-code 166K⭐ — agent harness optimization system
+- opencode 148.9K⭐ — open source coding agent
+
+### MCP Servers
+- No new significant entries beyond last scan
+
+### Embodied AI / Robotics
+- **BotBrain 174⭐** — Modular open-source brain for legged robots (Web UI, autonomous navigation) — directly relevant to NAV_DOG
+- Genesis 28.6K⭐ — still leading embodied AI simulator
+- FluxVLA 296⭐ — VLA platform
+- JushenRenji 17⭐ — 具身人机 (Bilibili channel, embodied AI projects)
+
+### Unitree Go2
+- unitree_webrtc_connect 306⭐ — WebRTC driver for Go2/G1
+- BotBrain 174⭐ — modular brain for legged robots (Go2 support)
+- go2_rl_gym 162⭐ — RL implementation for Go2
