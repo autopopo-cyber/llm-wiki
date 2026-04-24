@@ -349,3 +349,31 @@ Vector OS Nano is the most promising integration target:
 - PhyAgentOS "self-evolving embodied AI OS" concept overlaps with our Auto-Drive survival layer. Worth monitoring for integration ideas.
 - RLinf at 3,176⭐ is the top new embodied AI project — RL infrastructure could complement our navigation training pipeline.
 - Hermes v0.11.0 transport ABC is directly relevant: pluggable transport means easier A2A gateway integration.
+
+### Incremental Update — 2026-04-24 21:52
+
+#### New Findings
+- **datawhalechina/every-embodied** (1,573⭐) — Chinese tutorial: build embodied AI robot from scratch with Python, covers VLA/OpenVLA/SmolVLA/Pi0. **Directly relevant to NAV_DOG**: practical VLA implementation guide.
+- **Genesis** (28,572⭐) — Generative world for robotics & embodied AI learning. Simulation platform that could accelerate NAV_DOG software validation phase.
+
+#### System Status
+- Disk: 17%, RAM: 1.7/7.5Gi (effective after orphan cleanup), Load: 0.20, Uptime: 5d10h
+- MemOS orphans: 2 (within tolerance)
+- Backup: hermes-backup-20260424-2149.tar.gz (52K), rotation verified
+- 97 skills, all valid
+- Cron active: autonomous-drive-idle-loop every 30m
+
+
+### Incremental Update — 2026-04-24 21:52
+
+#### New Findings
+- **datawhalechina/every-embodied** (1,573⭐) — Chinese tutorial: build embodied AI robot from scratch with Python, covers VLA/OpenVLA/SmolVLA/Pi0. **Directly relevant to NAV_DOG**: practical VLA implementation guide.
+- **Genesis** (28,572⭐) — Generative world for robotics & embodied AI learning. Simulation platform that could accelerate NAV_DOG software validation phase.
+
+#### System Status
+- Disk: 17%, RAM: 1.7/7.5Gi (effective after orphan cleanup), Load: 0.20, Uptime: 5d10h
+- MemOS orphans: 2 (within tolerance)
+- Backup: hermes-backup-20260424-2149.tar.gz (52K), rotation verified
+- 97 skills, all valid
+- Cron active: autonomous-drive-idle-loop every 30m
+
