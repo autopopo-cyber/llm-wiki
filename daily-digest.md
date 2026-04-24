@@ -660,3 +660,28 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 - MemOS bridge: 2 processes (normal)
 - Skills: 100 total
 - Cron: 2 active jobs
+
+---
+
+## 2026-04-25 05:43 — Idle Loop Scan
+
+### Hermes v0.11.0 Released (2026-04-23)
+- Ink-based TUI (`hermes --tui`) with React/Ink rewrite
+- Pluggable Transport ABC + Native AWS Bedrock support
+- 5 new inference paths, QQBot platform (17th total)
+- GPT-5.5 via Codex OAuth
+- We are on v0.10.0 — **1363 commits behind**
+- ⚠️ Consider upgrading after user approval
+
+### Coding Agent Landscape
+- `everything-claude-code` 166K⭐ — Claude Code skill/memory/instinct system
+- `opencode` 149K⭐ — Open source coding agent (anomalyco)
+- `claude-code` 117K⭐ — Anthropic's terminal coding agent
+- `codex` 77K⭐ — OpenAI's lightweight terminal agent
+
+### MCP Server Ecosystem
+- `awesome-mcp-servers` 85K⭐ — Directory
+- `playwright-mcp` 31K⭐ — Microsoft Playwright MCP
+- `github-mcp-server` 29K⭐ — GitHub official MCP
+- `fastmcp` 25K⭐ — Pythonic MCP server builder
+- `activepieces` 22K⭐ — 400+ MCP servers for AI agents
