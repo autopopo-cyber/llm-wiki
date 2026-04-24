@@ -503,3 +503,32 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 **New wiki notes**: RLinf, every-embodied, xr_teleoperate, unitree_rl_lab
 
 **Hermes**: v0.11.0 (released 2026-04-23) — awaiting user approval for upgrade
+
+---
+
+## 2026-04-25 02:51 — Idle Loop Scan
+
+### AI Agents (Top 8 by stars)
+- langflow 147.3K⭐ — AI agent builder platform (pushed 04-24)
+- dify 139K⭐ — Agentic workflow platform (pushed 04-24)
+- system-prompts-and-models-of-ai-tools 136K⭐ — Agent system prompts collection
+- langchain 134.8K⭐ — Agent engineering platform (pushed 04-24)
+- hermes-agent 114.9K⭐ — Our platform (v0.11.0, pushed 04-24)
+- awesome-llm-apps 107.3K⭐ — 100+ runnable AI agent apps
+- **gemini-cli 102.3K⭐** — Google's open-source Gemini CLI agent (pushed 04-24) ← NEW in top 8
+
+### MCP Servers (Recently pushed)
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp-server 29.2K⭐
+- fastmcp 24.8K⭐ — Pythonic MCP server builder (pushed 04-24)
+- mcp-toolbox 14.8K⭐ — Google's MCP server for databases (pushed 04-24)
+
+### Embodied AI
+- Genesis 28.6K⭐ — Generative world for robotics (pushed 04-24)
+- RLinf 3.2K⭐ — RL infrastructure for embodied AI (pushed 04-24)
+- **Embodied_AI_Paper_List 2K⭐** — SYSU survey paper list (pushed 04-16) ← NEW tracking
+- **Awesome-World-Models 1.6K⭐** — World models paper list (pushed 04-24) ← NEW tracking
+- **BEHAVIOR-1K 1.4K⭐** — Stanford embodied AI platform (pushed 04-24) ← NEW tracking
+- every-embodied 1.6K⭐ — Datawhale VLA tutorial
+
+### Hermes
+- v0.11.0 still latest (released 2026-04-23) — awaiting user approval for upgrade
