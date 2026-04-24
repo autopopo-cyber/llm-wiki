@@ -324,3 +324,28 @@ Vector OS Nano is the most promising integration target:
 - MemOS orphans: 9 killed, ~400MB recovered
 - Gateway running, PostgreSQL running
 - 97 skills, all valid
+
+
+---
+
+## 2026-04-24 21:13 — Autonomous Drive Scan
+
+### Hermes Ecosystem
+- **Hermes v0.11.0** released 2026-04-23: Ink-based TUI rewrite, pluggable transport ABC + AWS Bedrock, 5 new inference paths (NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway), GPT-5.5 via Codex OAuth, QQBot (17th platform). 1,556 commits since v0.9.0.
+
+### Agent Ecosystem (Trending)
+- **everything-claude-code** (165,916⭐) — Agent harness optimization system for Claude Code
+- **opencode** (148,731⭐) — Open source coding agent (anomalyco)
+- **claude-mem** (66,777⭐) — Auto-capture plugin for Claude Code sessions
+
+### Embodied AI / Robotics (New)
+- **RLinf** (3,176⭐) — RL infrastructure for embodied and agentic AI (pushed 2026-04-24)
+- **PhyAgentOS** (205⭐) — Self-evolving embodied AI OS built on agentic workflows (pushed 2026-04-24)
+- **embodied-agents** (54⭐) — ROS2 framework for interactive physical agents (pushed 2026-04-20)
+- **SAGE** (265⭐) — NVlabs: Scalable Agentic 3D Scene Generation for Embodied AI (pushed 2026-04-22)
+- **SurveyBrainBody** (306⭐) — Embodied Co-Design for Rapidly Evolving Agents taxonomy
+
+### Key Observations
+- PhyAgentOS "self-evolving embodied AI OS" concept overlaps with our Auto-Drive survival layer. Worth monitoring for integration ideas.
+- RLinf at 3,176⭐ is the top new embodied AI project — RL infrastructure could complement our navigation training pipeline.
+- Hermes v0.11.0 transport ABC is directly relevant: pluggable transport means easier A2A gateway integration.
