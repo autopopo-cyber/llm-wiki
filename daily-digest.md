@@ -685,3 +685,24 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 - `github-mcp-server` 29K⭐ — GitHub official MCP
 - `fastmcp` 25K⭐ — Pythonic MCP server builder
 - `activepieces` 22K⭐ — 400+ MCP servers for AI agents
+
+
+## 2026-04-25 06:19 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- Hermes v0.11.0 (released Apr 23) still latest — we're on v0.10.0, 1363 commits behind
+- Top agents stable: langflow 147K⭐, dify 139K⭐, hermes-agent 115K⭐, browser-use 90K⭐
+- gemini-cli 102K⭐ (Google's terminal agent) — new entry since last scan
+
+### MCP Ecosystem
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp 29.2K⭐, fastmcp 24.8K⭐
+- Google mcp-toolbox 14.8K⭐ — database-focused MCP server
+- casdoor 13.5K⭐ — Agent-first IAM + MCP gateway (previously noted)
+
+### Embodied AI / Robotics
+- RLinf 3.2K⭐ (NEW) — RL Infrastructure for Embodied and Agentic AI — relevant to our stack
+- every-embodied 1.6K⭐ (datawhalechina) — Chinese VLA/OpenVLA/Pi0 tutorial — useful for reproduction
+- Genesis 28.6K⭐ still leading
+
+### System Health
+- MemOS bridge orphans: 7 processes (~630MB) — scheduled gateway restart for cleanup
