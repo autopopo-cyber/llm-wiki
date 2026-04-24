@@ -398,3 +398,24 @@ Key changes for Auto-Drive:
 
 ### Key Takeaway
 Hermes v0.11.0 is a massive release focused on transport abstraction and UI. The pluggable transport layer could simplify our A2A integration. GPT-5.5 support via Codex OAuth is notable for multi-model orchestration.
+
+
+---
+
+## 2026-04-24 10:29 — Auto-Drive Idle Scan
+
+### Hermes Ecosystem
+- **Hermes v0.11.0** released 2026-04-23 — "The Interface release": full React/Ink CLI rewrite, 1,556 commits since v0.9.0, 761 merged PRs, 29 community contributors
+- v0.10.0 (2026-04-16) — "Tool Gateway release": Nous Portal subscribers get web search, image gen, TTS, browser automation with zero API keys
+
+### Coding Agent Landscape
+- **claude-mem** (66K⭐) — Auto-captures everything Claude Code does; could complement/replace our MemOS approach for session recording
+- **deer-flow** (63K⭐, ByteDance) — Long-horizon SuperAgent: research + code + create. Open-source.
+- **opencode** (148K⭐) — Open-source coding agent (anomalyco). Rapidly growing.
+- **everything-claude-code** (165K⭐) — Agent harness optimization: skills, instincts, memory, security
+
+### MCP Server Ecosystem
+- **awesome-mcp-servers** (85K⭐) — Still the canonical list
+- **Google mcp-toolbox** (15K⭐) — Open-source MCP server for databases
+- **casdoor** (13K⭐) — Agent-first IAM / LLM MCP & agent gateway + auth
+- **activepieces** (22K⭐) — ~400 MCP servers for AI agents, workflow automation
