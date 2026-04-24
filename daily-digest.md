@@ -242,3 +242,26 @@ Vector OS Nano is the most promising integration target:
 ### Action Items
 - HERMES_UPGRADE v0.11.0 still pending user decision
 - No newrepos warranting skill creation
+---
+
+## 2026-04-24 19:22 — Idle Loop Scan
+
+### Notable New Projects
+- **dimos** (3.1K⭐) — dimensionalOS/dimos — "Agentic operating system for physical space. Vibecode humanoids, quadrupeds, drones." Pushed 2026-04-24. **Directly relevant** to our embodied AI path. Needs deep dive.
+- **sesame-robot** (1.6K⭐) — Open affordable mini quadruped on ESP32
+- **BotBrain** (174⭐) — Modular open-source brain for legged robots, web UI for teleops + navigation
+- **quad-sdk** (924⭐) — CMU Robomechanics Lab tools for agile quadrupeds
+
+### Coding Agent Ecosystem
+- everything-claude-code 165K⭐ (harness/optimization system)
+- opencode 148K⭐, claude-code 117K⭐, codex 77K⭐ — steady growth
+- claude-mem 66K⭐ — auto-capture plugin for Claude Code
+
+### MCP Ecosystem
+- awesome-mcp-servers 85K⭐, playwright-mcp 31K⭐, github-mcp 29K⭐
+- fastmcp 24K⭐, activepieces 21.8K⭐ (400+ MCP servers)
+
+### Hermes
+- v0.11.0 (v2026.4.23) — 1,556 commits, 761 PRs, 224K insertions since v0.9.0
+- v0.10.0 (v2026.4.16) — Tool Gateway release
+
