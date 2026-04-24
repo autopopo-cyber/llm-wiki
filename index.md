@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-23 | Total pages: 39
+> Last updated: 2026-04-24 | Total pages: 40
 
 ## 📝 深度分析
 
@@ -71,6 +71,7 @@
 
 - [[deploy-guide]] — 云服务器部署 Hermes Agent 全栈指南
 - [[Hermes-Agent-全栈配置指南]] — ⭐ Hermes 安装配置 + Hindsight + Wiki/tree-plan + WebUI 占位，一站式参考
+- [[MemOS-记忆系统部署指南]] — ⭐ 替代 Hindsight 的 MemOS 记忆系统部署全流程 + 6 大踩坑 + wiki 数据迁移
 
 ## 相关链接
 - [[分布式RPA系统]] — 上层多机协作调度，多机仿真场景参考

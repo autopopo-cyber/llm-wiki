@@ -1,6 +1,8 @@
 # 云服务器部署 Hermes Agent 全栈指南
 
-> 在公网云服务器（Ubuntu 24.04）上部署完整的 Hermes Agent + Hindsight + WebUI + Obsidian Wiki 知识系统
+> 在公网云服务器（Ubuntu 24.04）上部署完整的 Hermes Agent + MemOS + WebUI + Obsidian Wiki 知识系统
+>
+> ⚠️ 记忆系统已从 Hindsight 切换到 MemOS，详见 [[MemOS-记忆系统部署指南]]
 
 ---
 

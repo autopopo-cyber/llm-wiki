@@ -110,344 +110,57 @@ Vector OS Nano is the most promising integration target:
 
 ### Hermes Releases
 - Latest: v2026.4.16 (v0.10.0) — Tool Gateway release (web search, image gen, TTS, browser for paid subscribers)
-- Previous: v2026.4.13 (v0.9.0) — 487 commits, 269 PRs, 167 issues, 24 contributors
+- Previous: v2026.4.13 (v0.9.0) — 487 commits, 269 PRs, 167 issues, 24 cont
 
-### Key Insight
-dimos represents a new category: "agentic OS for physical space" — it combines navigation, perception, spatial memory, and multi-agent coordination under one framework. This is directly competitive with our ABot-Claw + Auto-Drive integration path. Worth monitoring and potentially integrating.
-
+[... earlier entries truncated ...]
 
 ---
 
-## Scan 2026-04-24 04:20
+## 2026-04-24 14:39 — Idle Loop Pass
 
-### amap-cvlab Ecosystem Update (Key — ABot-Claw upstream)
-- **ABot-World** (7⭐, pushed 4/19) — Real-Time Interactive World Simulation on Single Desktop GPU. NEW repo.
-- **ABot-PhysWorld** (295⭐, pushed 4/16) — Physical world simulation, 295 stars is significant
-- **ABot-Explorer** (4⭐, pushed 4/15) — Exploration module, NEW repo
-- **ABot-Claw** (117⭐, pushed 4/14) — Our integration target, stable
-- **ABot-Manipulation** (470⭐, pushed 3/30) — Manipulation framework, highest stars in org
-- **CE-Nav** (38⭐) — Flow-Guided RL for cross-embodiment local navigation
-- **OmniNav** (129⭐, ICLR 2026) — Unified prospective exploration + VLN framework
-- **ABot-Navigation** (124⭐) — Navigation module
-- **Reasoning-Over-Space** (4⭐, ACL 2026) — Spatial reasoning, NEW
+### Ecosystem Updates
+- **Hermes v0.11.0** (released 2026-04-23): Ink TUI, Transport ABC (pluggable), AWS Bedrock, GPT-5.5 via Codex OAuth, QQBot (17th platform), expanded plugin surface (register_command, dispatch_tool, pre_tool_call veto, transform_tool_result, image_gen backends, dashboard tabs), 5 new inference paths (NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway)
+- **ABot-Claw ecosystem**: ABot-World 7⭐ (real-time interactive world sim), ABot-PhysWorld 295⭐, ABot-Explorer 5⭐, ABot-Claw 119⭐ — AMAP CVLab expanding fast
+- **Unitree repos**: go2_omniverse 994⭐, FAST_LIO_LOCALIZATION_HUMANOID 766⭐, unitree_lerobot 630⭐
+- **Top quadruped repos**: towr 1054⭐ (trajectory optimization), dial-mpc 962⭐, rl-mpc-locomotion 961⭐
 
-**Insight**: amap-cvlab is building a full embodied AI stack: World simulation → Physics → Navigation → Manipulation → Exploration → Reasoning. ABot-Claw is the agent orchestration layer that sits on top. The ecosystem is maturing fast — 3 new repos in the last week.
+### System Status
+- Disk: 17% used (95G free), RAM: 1.5G/7.5G, Load: 0.20, Uptime: 5d 3h
+- Gateway + Hindsight + PostgreSQL: all running
+- 94 skills, 21 backups, credentials intact
+- MoLing: not running (on-demand only)
 
-### AMAP-EAI (Different org, also AMAP)
-- **SocialNav** (81⭐, pushed 4/21) — Human-inspired foundation model for socially-aware embodied navigation
-- **Nav-R2** (17⭐) — Dual-Relation Reasoning for open-vocabulary object-goal navigation
-
-### Coding Agent Landscape (Stable)
-- deer-flow (63.5K⭐) still leading for multi-agent SuperAgent (ByteDance)
-- claude-mem (66.3K⭐) — memory compression for Claude Code sessions, relevant to our Hindsight work
-- Casdoor (13.5K⭐) — Agent-first IAM + MCP gateway, could replace our planned auth layer
-
-### MCP Ecosystem (Growing)
-- fastmcp (24.8K⭐) becoming the standard Python MCP framework
-- googleapis/mcp-toolbox (14.8K⭐) — Google's official database MCP
-- Casdoor (13.5K⭐) — IAM + MCP gateway + OpenClaw support
-
-### No New Hermes Releases
-- Still at v0.10.0 (2026-04-16)
+### Notes
+- Hermes v0.11.0 upgrade available (current: v0.10.0) — awaits user decision
+- ABot-Claw (119⭐) remains our primary embodied AI reference; ABot-World adds real-time sim capability
+- dial-mpc and rl-mpc-locomotion are directly relevant to NAV_DOG MPC locomotion work
 
 ---
 
-## Scan 2026-04-24 04:20
+## Idle Loop Scan — 2026-04-24 15:37
 
-### amap-cvlab Ecosystem Update (Key - ABot-Claw upstream)
-- **ABot-World** (7 stars, pushed 4/19) - Real-Time Interactive World Simulation on Single Desktop GPU. NEW repo.
-- **ABot-PhysWorld** (295 stars, pushed 4/16) - Physical world simulation
-- **ABot-Explorer** (4 stars, pushed 4/15) - Exploration module, NEW repo
-- **ABot-Claw** (117 stars, pushed 4/14) - Our integration target, stable
-- **ABot-Manipulation** (470 stars, pushed 3/30) - Manipulation framework, highest stars in org
-- **CE-Nav** (38 stars) - Flow-Guided RL for cross-embodiment local navigation
-- **OmniNav** (129 stars, ICLR 2026) - Unified prospective exploration + VLN framework
-- **ABot-Navigation** (124 stars) - Navigation module
-- **Reasoning-Over-Space** (4 stars, ACL 2026) - Spatial reasoning, NEW
-
-**Insight**: amap-cvlab is building a full embodied AI stack: World simulation > Physics > Navigation > Manipulation > Exploration > Reasoning. ABot-Claw is the agent orchestration layer. 3 new repos in the last week.
-
-### AMAP-EAI (Different org, also AMAP)
-- **SocialNav** (81 stars, pushed 4/21) - Human-inspired foundation model for socially-aware embodied navigation
-- **Nav-R2** (17 stars) - Dual-Relation Reasoning for open-vocabulary object-goal navigation
-
-### No New Hermes Releases
-- Still at v0.10.0 (2026-04-16)
-
-
----
-
-## 2026-04-24 05:00 — Idle Loop Scan
-
-### AI Agent Ecosystem
-- langflow 147K⭐ — visual AI workflow builder (pushed 04-23)
-- dify 139K⭐ — agentic workflow platform (pushed 04-23)
-- langchain 135K⭐ — agent engineering platform (pushed 04-23)
-- hermes-agent 113K⭐ — v0.10.0 still latest (Apr 16)
-- gemini-cli 102K⭐ — Gemini terminal agent (pushed 04-23)
-- browser-use 90K⭐ — web automation for AI agents (pushed 04-21)
-- ragflow 79K⭐ — RAG + Agent engine (pushed 04-23)
-
-### Robotics / Embodied AI
-- Genesis 28.6K⭐ — generative world for robotics (pushed 04-22)
-- LeRobot 23.5K⭐ — HuggingFace end-to-end robot learning (pushed 04-23)
-- openpilot 60.7K⭐ — comma.ai self-driving OS (pushed 04-23)
-- PythonRobotics 29.2K⭐ — robotics algorithm samples (pushed 04-20)
-
-### MCP Servers
-- awesome-mcp-servers 85.4K⭐ — curated MCP server list
-- playwright-mcp 31.3K⭐ — Microsoft Playwright MCP
-- github-mcp-server 29.2K⭐ — GitHub official MCP
-- fastmcp 24.8K⭐ — Pythonic MCP server builder
-- activepieces 21.8K⭐ — AI workflow + ~400 MCP servers
-- mcp-toolbox 14.8K⭐ — Google database MCP server
-
-### Notable Changes Since Last Scan
-- No new Hermes release (v0.10.0 from Apr 16 still latest)
-- activepieces (21.8K⭐) is new — offers ~400 MCP servers, potential integration
-- mcp-toolbox (14.8K⭐) by Google — database MCP, could be useful for Postgres job queue
-
-## 2026-04-24 — Idle Loop Scan
-
-### AI Agent Ecosystem
-- **hermes-agent** 113K⭐ — stable, v0.10.0 (Apr 16, Tool Gateway release)
-- **everything-claude-code** 165K⭐ — Claude Code optimization system
-- **opencode** 148K⭐ — Open source coding agent (TypeScript)
-- **langflow** 147K⭐ — Visual agent builder
-- **dify** 139K⭐ — Production agentic workflow platform
-
-### VLA / Embodied AI (NEW discoveries)
-- **VITRA** 355⭐ (ICRA 2026) — Scalable VLA pretraining with rewards → relevant to ABot-Claw VLAC
-- **MemoryVLA** 216⭐ (ICLR 2026) — Perceptual-Cognitive Memory in VLA → relevant to layered-memory-architecture
-- **Awesome-RL-VLA** 644⭐ — Survey on RL for VLA robotic manipulation
-- **VLA-Handbook** 159⭐ — Chinese VLA learning/interview guide
-- **open-h-embodiment** 109⭐ — Community dataset for shared embodiment
-
-### Unitree Ecosystem
-- **xr_teleoperate** 1411⭐ — XR-based humanoid robot teleoperation
-- **unitree_lerobot** 629⭐ — LeRobot integration for Unitree (useful for Go2)
-- **unitree_rl_mjlab** 333⭐ — RL with MuJoCo Lab for Unitree robots
-
-### ABot Ecosystem
-- **ABot-PhysWorld** 295⭐ — Physical world simulation (new from AMAP CVLab)
-- **ABot-Claw** 117⭐ — Stable, updated Apr 23
-- **ABot-World** 7⭐ — Real-time interactive world sim on single GPU
+### Agent Ecosystem
+- **hermes-agent v0.11.0** released 2026-04-23: "Interface release" — Ink-based TUI (`hermes --tui`), pluggable transport ABC, native AWS Bedrock, GPT-5.5 via Codex OAuth, 17th messaging platform (QQBot). 1,556 commits since v0.9.0.
+- **everything-claude-code** (165K⭐): Agent harness performance optimization system — skills, instincts, memory
+- **opencode** (148K⭐): Open source coding agent, very active
+- **claude-code** (117K⭐): Anthropic's agentic coding tool
+- **codex** (77K⭐): OpenAI's lightweight coding agent
+- **claude-mem** (66K⭐): Claude Code plugin auto-captures everything during sessions
 
 ### MCP Ecosystem
-- **awesome-mcp-servers** 85K⭐ — master list
-- **playwright-mcp** 31K⭐ — browser automation
-- **fastmcp** 25K⭐ — Pythonic MCP server builder
-- **activepieces** 22K⭐ — 400+ MCP servers + workflow automation
+- **awesome-mcp-servers** (85K⭐): Master collection, still growing
+- **fastmcp** (24K⭐): Fast Pythonic MCP server builder, actively developed
+- **activepieces** (21K⭐): AI Agents + MCPs + Workflow Automation (~400 MCP servers)
+- **playwright-mcp** (31K⭐): Browser automation via MCP
+- **mcp-toolbox** (14K⭐): Database MCP server
 
-
----
-
-## 2026-04-24 06:44 — Cooldown Sweep
-
-### ENSURE_CONTINUATION
-- Health: disk 16%/96G avail, RAM 17%, load 0.01, uptime 4d19h — all healthy
-- BACKUP_DATA: Skipped (cooldown, last 06:11)
-- SKILL_INTEGRITY: Skipped (cooldown, last 06:11)
-
-### EXPAND_CAPABILITIES
-- No new patterns ≥3x, no critical patches, no stale temp files
-
-### EXPAND_WORLD_MODEL — GitHub Scan
-- **🚨 Hermes v0.11.0 released (Apr 23)!** — "The Interface release"
-  - New Ink-based TUI (React/Ink rewrite)
-  - Pluggable transport ABC + native AWS Bedrock
-  - 5 new inference paths (NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway)
-  - GPT-5.5 over Codex OAuth
-  - QQBot — 17th platform
-  - Plugin surface expanded (slash commands, tool dispatch, pre_tool_call veto, etc.)
-  - `/steer` — mid-run agent nudges
-  - Shell hooks for lifecycle events
-  - Webhook direct-delivery mode
-  - Smarter delegation with orchestrator role + max_spawn_depth
-  - Auxiliary model configuration
-- VLA/Embodied AI:
-  - Awesome-RL-VLA (644⭐) — RL+VLA survey
-  - VLA-Handbook (159⭐) — Chinese VLA learning guide
-  - InternVLA-A1 — end-to-end VLA for manipulation
-- AMAP CVLab:
-  - ABot-PhysWorld (295⭐), ABot-Claw (117⭐), ABot-World (7⭐), ABot-Explorer (4⭐)
-- MCP ecosystem:
-  - awesome-mcp-servers (85K⭐), playwright-mcp (31K⭐), github-mcp-server (29K⭐), fastmcp (25K⭐)
-## 2026-04-24 07:57 — Idle Loop Digest
-
-### Hermes v0.11.0 Released (2026-04-23)
-- **Transport ABC**: Pluggable transport layer extracted from run_agent.py. AnthropicTransport, ChatCompletionsTransport, ResponsesApiTransport, BedrockTransport. **Impact on Auto-Drive**: Our cron and subagent spawning may need transport configuration updates.
-- **Ink TUI**: Full React/Ink rewrite of interactive CLI. `hermes --tui`. Not directly relevant to cron/idle-loop.
-- **Plugin Surface Expansion**: `register_command`, `dispatch_tool`, `pre_tool_call` veto, `transform_tool_result`, `transform_terminal_output`, image_gen backends, custom dashboard tabs. **Impact on Auto-Drive**: Plugin hooks could replace some of our shell-based lock management with native plugin hooks.
-- **5 New Inference Paths**: NVIDIA NIM, Arcee AI, Step Plan, Google Gemini CLI OAuth, Vercel ai-gateway.
-- **GPT-5.5 over Codex OAuth**: Available through ChatGPT Codex OAuth with live model discovery.
-- **QQBot**: 17th platform adapter. Not directly relevant.
-- **Upgrade Priority**: MEDIUM — Transport ABC + plugin surface are architecturally significant but current setup works fine. Should evaluate after next user session.
-
-### ABot-PhysWorld (295★, new)
-- AMAP CVLab (same org as ABot-Claw)
-- Python, last pushed 2026-04-16
-- No description yet — likely physical world simulation companion to ABot-Claw
-- **Relevance**: Could be Nav/Sim environment for NAV_DOG project
-
-### RLinf (3,171★)
-- "Reinforcement Learning Infrastructure for Embodied and Agentic AI"
-- Relevant to NAV_DOG training pipeline
-- Worth deeper investigation when A2 is ready
-
-### Embodied AI Landscape
-- HCPLab-SYSU/Embodied_AI_Paper_List (2,020★) — comprehensive paper list
-- zchoi/Awesome-Embodied-Robotics-and-Agent (1,772★) — curated list
-
----
-
-## Agent Ecosystem Scan -- 2026-04-24 08:33
-
-### Top AI Agent Projects (by stars)
-- JavaGuide 155K - Java backend + AI app dev guide
-- Langflow 147K - AI agent workflow builder
-- Dify 139K - Agentic workflow platform
-- System Prompts Collection 136K - Curated AI tool prompts
-- Langchain 135K - Agent engineering platform
-- Hermes Agent 113K - The agent that grows with you
-- Awesome LLM Apps 107K - 100+ agent and RAG apps
-- Gemini CLI 102K - Gemini in terminal
-
-### Recent Coding Agents (pushed after Apr 20)
-- everything-claude-code 165K - Agent harness optimization system
-- opencode 148K - Open source coding agent
-- claude-code 117K - Anthropic terminal coding agent
-- codex 77K - OpenAI lightweight coding agent
-
-### Recent MCP Servers
-- awesome-mcp-servers 85K - Curated MCP server list
-- playwright-mcp 31K - Microsoft browser MCP
-- github-mcp-server 29K - GitHub official MCP
-- fastmcp 25K - Pythonic MCP framework
-- activepieces 22K - AI agents + 400 MCPs
-
-### Hermes Releases
-- v0.11.0 (Apr 23): Interface release, React/Ink CLI rewrite, plugin surface expansion
-- No new release since last scan
-
-### Key Observations
-- everything-claude-code at 165K: agent harness optimization aligns with Auto-Drive survival layer
-- opencode 148K continues rapid growth as open-source coding agent
-- MCP ecosystem still expanding fast (fastmcp + activepieces as frameworks)
-- No new Hermes release since v0.11.0
-
----
-
-## 2026-04-24 09:12 — Idle Loop Scan
-
-### Hermes Agent v0.11.0 Released (2026-04-23)
-Key changes for Auto-Drive:
-- **Transport ABC** — pluggable transport layer. Format conversion extracted from run_agent.py. Implications: custom transports possible, easier A2A integration.
-- **Ink TUI** — `hermes --tui` React/Ink rewrite. Subagent spawn observability overlay (useful for monitoring idle-loop spawned subagents).
-- **AWS Bedrock native** — new inference path via Converse API.
-- **GPT-5.5 via Codex OAuth** — new reasoning model available.
-- **Plugin surface expansion** — more hooks for Auto-Drive integration.
-- **5 new inference paths** — NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway.
-- **QQBot adapter** — 17th platform.
-
-### Ecosystem Scan
-**Top AI Agent Projects (by stars)**:
-- langflow (147K⭐) — agent workflow builder
-- dify (139K⭐) — agentic workflow platform  
-- langchain (135K⭐) — agent engineering platform
-- hermes-agent (113K⭐) — the agent that grows with you
-- gemini-cli (102K⭐) — Gemini terminal agent
-
-**Hot Coding Agents (recent push)**:
-- claude-mem (66K⭐) — Claude Code auto-memory plugin
-- opencode (148K⭐) — open source coding agent
-
-**MCP Servers Trending**:
-- playwright-mcp (31K⭐) — Microsoft Playwright MCP
-- github-mcp-server (29K⭐) — GitHub official MCP
-- fastmcp (25K⭐) — Pythonic MCP framework
-- mcp-toolbox (15K⭐) — Google database MCP
-
-### Action Items
-- ⏳ HERMES_V0.11_UPGRADE — evaluate upgrade path (Transport ABC is relevant for A2A)
-- ⏳ AUTONOMOUS_DRIVE_SPEC_REPO — still needs GitHub auth
----
-
-## 2026-04-24 09:51 — Idle Loop Scan
-
-### Hermes v0.11.0 Released (Apr 23)
-- **Ink-based TUI** — `hermes --tui` with React/Ink rewrite, JSON-RPC backend, streaming, subagent overlay
-- **Transport ABC** — Pluggable transport layer: Anthropic, ChatCompletions, ResponsesApi, Bedrock
-- **5 New Inference Paths** — NVIDIA NIM, Arcee AI, Step Plan, Gemini CLI OAuth, Vercel ai-gateway
-- **GPT-5.5 over Codex OAuth** — live model discovery from OpenAI without catalog updates
-- **QQBot** — 17th messaging platform
-- **Tool Gateway** (v0.10.0) — deferrred features folded in
-- 1,556 commits, 761 PRs, 224K insertions, 224+ contributors since v0.9.0
-- **Notable**: No A2A/swarm mentions yet in this release
-
-### AI Agent Ecosystem
-- Top agents: langflow (147K*), dify (139K*), hermes-agent (113K*)
-- Coding agents: everything-claude-code (165K*), opencode (148K*), claude-code (117K*), codex (77K*)
-- claude-mem (67K*) — auto-capture plugin for Claude Code (relevant to our memory work)
-
-### MCP Servers Trending
-- awesome-mcp-servers (85K*), playwright-mcp (31K*), github-mcp-server (29K*)
-- fastmcp (25K*) — Pythonic MCP server builder
-- activepieces (22K*) — 400+ MCP servers for agents
-- googleapis/mcp-toolbox (15K*) — database MCP server
-
-### Key Takeaway
-Hermes v0.11.0 is a massive release focused on transport abstraction and UI. The pluggable transport layer could simplify our A2A integration. GPT-5.5 support via Codex OAuth is notable for multi-model orchestration.
-
-
----
-
-## 2026-04-24 10:29 — Auto-Drive Idle Scan
-
-### Hermes Ecosystem
-- **Hermes v0.11.0** released 2026-04-23 — "The Interface release": full React/Ink CLI rewrite, 1,556 commits since v0.9.0, 761 merged PRs, 29 community contributors
-- v0.10.0 (2026-04-16) — "Tool Gateway release": Nous Portal subscribers get web search, image gen, TTS, browser automation with zero API keys
-
-### Coding Agent Landscape
-- **claude-mem** (66K⭐) — Auto-captures everything Claude Code does; could complement/replace our MemOS approach for session recording
-- **deer-flow** (63K⭐, ByteDance) — Long-horizon SuperAgent: research + code + create. Open-source.
-- **opencode** (148K⭐) — Open-source coding agent (anomalyco). Rapidly growing.
-- **everything-claude-code** (165K⭐) — Agent harness optimization: skills, instincts, memory, security
-
-### MCP Server Ecosystem
-- **awesome-mcp-servers** (85K⭐) — Still the canonical list
-- **Google mcp-toolbox** (15K⭐) — Open-source MCP server for databases
-- **casdoor** (13K⭐) — Agent-first IAM / LLM MCP & agent gateway + auth
-- **activepieces** (22K⭐) — ~400 MCP servers for AI agents, workflow automation
-
----
-
-## 2026-04-24 11:03 — Idle Loop Digest
-
-### Top AI Agent Ecosystem
-- JavaGuide 155K★, Langflow 147K★, Dify 139K★, Hermes 113K★ (stable)
-- system-prompts-and-models 136K★ — growing collection of agent system prompts (security/privacy implications)
-- awesome-llm-apps 107K★, Gemini CLI 102K★, browser-use 90K★
-
-### Coding Agent Landscape
-- everything-claude-code 165K★ — agent harness optimization, skills/instincts/memory
-- opencode 148K★ — open source coding agent
-- claude-code 117K★, codex 77K★ (stable positions)
-- claude-mem 67K★ — Claude Code plugin for automatic capture (relevant to our Hindsight/memory approach)
-
-### MCP Server Ecosystem
-- awesome-mcp-servers 85K★, playwright-mcp 31K★, github-mcp-server 29K★
-- fastmcp 25K★, activepieces 22K★ (400+ MCP servers for agents)
-- google/mcp-toolbox 15K★ — database MCP server
-- Figma-Context-MCP 14K★ — design-to-code MCP
-
-### Hermes v0.11.0 (2026-04-23)
-- Interface release — Transport ABC, Ink TUI
-- Plugin surface expansion: register_command, dispatch_tool, pre_tool_call veto
-- Bedrock provider, GPT-5.5, QQBot integration
-- 1,556 commits since v0.9.0, 761 merged PRs
+### Robotics / Embodied AI
+- **ABot-Claw** (120⭐): Now 120 stars (was 116), pushed 2026-04-14
+- **ABot-PhysWorld** (296⭐): CVPR 2026 World Model track — leaderboard repo created 2026-04-24!
+- **go2_omniverse** (994⭐): Unitree Go2/G1 Isaac Lab support (stable)
+- **go2_ros2_sdk** (899⭐): Unofficial ROS2 SDK for Go2
 
 ### Key Observation
-- everything-claude-code's "harness optimization" concept (skills/instincts/memory) aligns with Auto-Drive's survival layer. Both treat idle time as a resource for self-improvement.
-- claude-mem (67K★) confirms market demand for agent memory/capture tools — our Hindsight + wiki approach is in the right direction.
-- MCP ecosystem consolidation: 400+ servers catalogued in activepieces, suggesting standardization is accelerating.
+- Hermes v0.11.0 introduces pluggable transports and Ink TUI — relevant for A2A integration architecture
+- CVPR 2026 World Model track with ABot-PhysWorld leaderboard suggests AMAP CV Lab is pushing hard on embodied world models — could accelerate ABot-Claw ecosystem
+- claude-mem (66K⭐) validates the "capture everything" approach similar to our Hindsight + MemOS stack
