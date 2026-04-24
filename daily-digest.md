@@ -491,3 +491,15 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 - unitree_webrtc_connect 306⭐ — WebRTC driver for Go2/G1
 - BotBrain 174⭐ — modular brain for legged robots (Go2 support)
 - go2_rl_gym 162⭐ — RL implementation for Go2
+
+### 2026-04-25 02:18 — Idle Loop Scan
+
+**AI Agents**: langflow 147K⭐, dify 139K⭐, hermes-agent 115K⭐ (v0.11.0), gemini-cli 102K⭐, browser-use 90K⭐
+
+**MCP Servers**: awesome-mcp-servers 85.5K⭐, playwright-mcp 31K⭐, github-mcp-server 29K⭐, fastmcp 25K⭐, activepieces 22K⭐, mcp-toolbox 15K⭐
+
+**Embodied AI**: Genesis 28.6K⭐, RLinf 3.2K⭐ (RL infra), every-embodied 1.6K⭐ (VLA tutorial), xr_teleoperate 1.4K⭐ (Unitree XR), unitree_rl_lab 974⭐ (Unitree RL IsaacLab)
+
+**New wiki notes**: RLinf, every-embodied, xr_teleoperate, unitree_rl_lab
+
+**Hermes**: v0.11.0 (released 2026-04-23) — awaiting user approval for upgrade
