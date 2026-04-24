@@ -265,3 +265,32 @@ Vector OS Nano is the most promising integration target:
 - v0.11.0 (v2026.4.23) — 1,556 commits, 761 PRs, 224K insertions since v0.9.0
 - v0.10.0 (v2026.4.16) — Tool Gateway release
 
+
+---
+
+## 2026-04-24 20:00 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- Langflow 147K⭐, Dify 139K⭐, Hermes 114K⭐ (v0.11.0 released 4/23)
+- coding agents: everything-claude-code 166K⭐, opencode 149K⭐, claude-code 118K⭐, codex 78K⭐
+- claude-mem 67K⭐ (auto-capture Claude Code sessions)
+
+### Hermes v0.11.0 Highlights
+- Ink-based TUI (`hermes --tui`), React/Ink rewrite
+- Pluggable Transport ABC (Anthropic/ChatCompletions/ResponsesApi/Bedrock)
+- AWS Bedrock native support
+- GPT-5.5 via Codex OAuth
+- QQBot (17th platform)
+- Expanded plugin surface (register_command, dispatch_tool, pre_tool_call veto)
+- 1,556 commits, 761 merged PRs since v0.9.0
+
+### MCP Servers
+- awesome-mcp-servers 85K⭐, playwright-mcp 31K⭐, github-mcp-server 29K⭐
+- fastmcp 25K⭐, activepieces 22K⭐, mcp-toolbox 15K⭐, casdoor 13K⭐
+
+### Embodied AI / Robotics
+- RLinf 3.2K⭐ (RL infrastructure for embodied/agentic AI, pushed 4/24)
+- Awesome-Embodied-Robotics-and-Agent 1.8K⭐
+- HY-Embodied 652⭐ (embodied foundation models)
+- loco-mujoco 1.4K⭐ (locomotion imitation learning benchmark, pushed 4/23)
+
