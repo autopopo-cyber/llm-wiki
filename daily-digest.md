@@ -532,3 +532,28 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 
 ### Hermes
 - v0.11.0 still latest (released 2026-04-23) — awaiting user approval for upgrade
+
+## 2026-04-25 03:28 — Idle Loop Scan
+
+### AI Agents (Top 8 by stars)
+- langflow 147.3K⭐ — AI agent builder platform
+- dify 139K⭐ — Agentic workflow platform
+- langchain 134.8K⭐ — Agent engineering platform
+- hermes-agent 114.9K⭐ — Our platform (v0.11.0)
+- awesome-llm-apps 107.3K⭐ — 100+ runnable AI agent apps
+- gemini-cli 102.3K⭐ — Google's open-source Gemini CLI agent
+- **browser-use 90K⭐** — Web automation for AI agents ← returned to top-8
+
+### MCP Servers
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp-server 29.2K⭐
+- fastmcp 24.8K⭐, activepieces 21.9K⭐, mcp-toolbox 14.8K⭐
+- **casdoor 13.5K⭐** — Agent-first IAM/MCP gateway + auth ← NEW, relevant to AOP security
+- **Figma-Context-MCP 14.5K⭐** — Figma layout for AI coding agents ← NEW
+
+### Embodied AI
+- Genesis 28.6K⭐, RLinf 3.2K⭐, Embodied_AI_Paper_List 2K⭐
+- every-embodied 1.6K⭐, Awesome-World-Models 1.6K⭐, BEHAVIOR-1K 1.4K⭐
+- No new significant entries since last scan
+
+### Hermes
+- v0.11.0 still latest (released 2026-04-23) — awaiting user approval for upgrade
