@@ -419,3 +419,35 @@ Hermes v0.11.0 is a massive release focused on transport abstraction and UI. The
 - **Google mcp-toolbox** (15K⭐) — Open-source MCP server for databases
 - **casdoor** (13K⭐) — Agent-first IAM / LLM MCP & agent gateway + auth
 - **activepieces** (22K⭐) — ~400 MCP servers for AI agents, workflow automation
+
+---
+
+## 2026-04-24 11:03 — Idle Loop Digest
+
+### Top AI Agent Ecosystem
+- JavaGuide 155K★, Langflow 147K★, Dify 139K★, Hermes 113K★ (stable)
+- system-prompts-and-models 136K★ — growing collection of agent system prompts (security/privacy implications)
+- awesome-llm-apps 107K★, Gemini CLI 102K★, browser-use 90K★
+
+### Coding Agent Landscape
+- everything-claude-code 165K★ — agent harness optimization, skills/instincts/memory
+- opencode 148K★ — open source coding agent
+- claude-code 117K★, codex 77K★ (stable positions)
+- claude-mem 67K★ — Claude Code plugin for automatic capture (relevant to our Hindsight/memory approach)
+
+### MCP Server Ecosystem
+- awesome-mcp-servers 85K★, playwright-mcp 31K★, github-mcp-server 29K★
+- fastmcp 25K★, activepieces 22K★ (400+ MCP servers for agents)
+- google/mcp-toolbox 15K★ — database MCP server
+- Figma-Context-MCP 14K★ — design-to-code MCP
+
+### Hermes v0.11.0 (2026-04-23)
+- Interface release — Transport ABC, Ink TUI
+- Plugin surface expansion: register_command, dispatch_tool, pre_tool_call veto
+- Bedrock provider, GPT-5.5, QQBot integration
+- 1,556 commits since v0.9.0, 761 merged PRs
+
+### Key Observation
+- everything-claude-code's "harness optimization" concept (skills/instincts/memory) aligns with Auto-Drive's survival layer. Both treat idle time as a resource for self-improvement.
+- claude-mem (67K★) confirms market demand for agent memory/capture tools — our Hindsight + wiki approach is in the right direction.
+- MCP ecosystem consolidation: 400+ servers catalogued in activepieces, suggesting standardization is accelerating.
