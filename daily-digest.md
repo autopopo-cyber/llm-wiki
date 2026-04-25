@@ -748,3 +748,29 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 
 ### No changes in
 - Genesis (28.6K⭐), ABot-Claw ecosystem — same as last scan
+
+---
+
+## 2026-04-25 08:07 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- **everything-claude-code** 166K⭐ — Agent harness optimization system (skills, instincts, memory)
+- **opencode** 149K⭐ — Open source coding agent (actively pushed 2026-04-25)
+- **codex** 77.7K⭐ — Lightweight coding agent (OpenAI, actively pushed)
+- **claude-mem** 67K⭐ — Claude Code plugin for auto-capturing sessions
+
+### MCP Ecosystem
+- **awesome-mcp-servers** 85.5K⭐ — MCP server collection (actively maintained)
+- **github-mcp-server** 29.2K⭐ — GitHub's official MCP server
+- **activepieces** 21.9K⭐ — AI Agents + MCPs + workflow automation (~400 MCP servers)
+
+### Robotics / Legged Locomotion (DIRECTLY RELEVANT)
+- **DreamWaQ_Go2W** 86⭐ (ShengqianChen) — Go2W legged-wheel locomotion RL based on NVIDIA Isaac Gym 🎯
+- **ihmc-open-robotics-software** 313⭐ — Legged locomotion algorithms + momentum-based controller
+- **go2-open-competition-2026** — Tencent AI Arena 2026 legged robot competition starter
+
+### Key Observation
+- DreamWaQ_Go2W is directly deployable on Unitree Go2W — matches our NAV_DOG path
+- NVIDIA Isaac Gym → Sim2Real pipeline aligns with Marathongo validation approach
+- Tencent AI Arena 2026 competition could be a validation target
+
