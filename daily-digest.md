@@ -728,3 +728,23 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 - MGDP 87 stars — Generalized Depth Perception for quadruped (Adv. Sci. 2026)
 - basic-locomotion-isaaclab 68 stars — IsaacLab extension for multi-quadruped locomotion
 - mhflocke 13 stars — Biologically grounded embodied cognition for quadruped locomotion
+
+---
+
+## 2026-04-25 07:31 — Idle Loop Scan
+
+### New Notable Projects
+- **RLinf** (3.2K⭐) — RL Infrastructure for Embodied and Agentic AI. Relevant to our robot RL training pipeline. https://github.com/RLinf/RLinf
+- **every-embodied** (1.6K⭐) — Datawhalechina tutorial: build VLA/OpenVLA/SmolVLA/Pi0 from scratch. Chinese-language, very useful for reproduction. https://github.com/datawhalechina/every-embodied
+- **activepieces** (21.9K⭐) — AI Agents + 400+ MCP servers + workflow automation. Potential RPA framework candidate. https://github.com/activepieces/activepieces
+
+### Hermes Ecosystem
+- **Hermes v0.11.0** released 2026-04-23 — 1,556 commits since v0.9.0, 761 merged PRs, 224K insertions, 22+ community contributors. Major release.
+
+### MCP Ecosystem
+- **playwright-mcp** (31.4K⭐) — Microsoft official Playwright MCP server. Growing fast.
+- **fastmcp** (24.8K⭐) — Pythonic MCP server builder.
+- **mcp-toolbox** (14.8K⭐) — Google's MCP server for databases.
+
+### No changes in
+- Genesis (28.6K⭐), ABot-Claw ecosystem — same as last scan
