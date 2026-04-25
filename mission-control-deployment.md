@@ -24,5 +24,5 @@
 1. 配置 .env 指向 Hermes Gateway
 2. 设置 AUTH_SECRET 和管理员账号
 3. 重新 build (pnpm build)
-4. 注册三个 agent（始皇、骠骑、丞相）
+4. 注册三个 agent（始皇、王翦、丞相）
 5. 测试心跳和任务看板

@@ -66,7 +66,7 @@ browser-use close
 - ❌ 对复杂交互可能需要多次 LLM 调用
 
 **与 Hermes 集成方式:**
-1. 在相邦/骠骑上安装 `pip install browser-use`
+1. 在相邦/王翦上安装 `pip install browser-use`
 2. Hermes 通过 `terminal` 工具调用 CLI: `browser-use open ...` → `browser-use state` → `browser-use click N`
 3. 截图给视觉模型分析：`browser-use screenshot /tmp/page.png` → `vision_analyze`
 4. 或直接用 browser-use 的 Agent 模式，DeepSeek V4 做主模型
@@ -141,7 +141,7 @@ browser-use close
 
 ## 针对机器狗 + Game-Auto-Android 的推荐
 
-### 机器狗 (相邦/白起/骠骑)
+### 机器狗 (相邦/白起/王翦)
 - **browser-use** 是首选。机器狗开发涉及大量文档检索、GitHub issue 交互、论坛爬取。browser-use 的 CLI 模式对 Hermes 的 terminal 工具最友好。
 - 安装路径: `pip install browser-use && playwright install chromium`
 
@@ -166,7 +166,7 @@ browser-use close
 Web Agent:
   pip install browser-use
 
-OS Agent (可选, 骠骑):
+OS Agent (可选, 王翦):
   pip install gui-agents  (Agent-S)
   pip install pyautogui pynput
 
