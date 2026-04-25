@@ -1,0 +1,21 @@
+*** Begin Patch
+*** Update File: run_agent.py
+@@ Save session log incrementally (so progress is visible even if interrupted) @@
+                    # Save session log incrementally (so progress is visible even if interrupted)
+                    self._session_messages = messages
+                    self._save_session_log(messages)
++
++                    # ── NEW: Incremental SQLite SessionDB flush ──
++                    # After every tool-call batch, immediately persist to SQLite
++                    # so a mid-session crash does not lose progress. The flush
++                    # is idempotent (guarded by _last_flushed_db_idx) and
++                    # wrapped in try/except so it can never block the loop.
++                    if self.persist_session and self._session_db:
++                        try:
++                            self._flush_messages_to_session_db(messages, conversation_history)
++                        except Exception as e:
++                            logger.warning("Incremental session DB flush failed: %s", e)
++
+                    # Continue loop for next response
+                    continue
+*** End Patch

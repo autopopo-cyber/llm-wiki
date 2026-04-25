@@ -1,3 +1,53 @@
+---
+
+## 2026-04-25 04:04 — Idle Loop Scan
+
+### Hermes Agent v0.11.0 Released (2026-04-23)
+Major "Interface" release — 1,556 commits, 761 PRs, 29 community contributors.
+Key highlights for our setup:
+- **Ink-based TUI** (`hermes --tui`) — full React/Ink rewrite
+- **Transport ABC** — pluggable transport layer (Anthropic/ChatCompletions/ResponsesAPI/Bedrock)
+- **GPT-5.5 over Codex OAuth** — live model discovery
+- **QQBot** — 17th platform (QR scan config, Chinese market)
+- **`/steer`** — mid-run agent nudges without interrupting turns
+- **Smarter delegation** — `orchestrator` role, `max_spawn_depth`, file-coordination for concurrent siblings
+- **Plugin surface** — `dispatch_tool`, `pre_tool_call` veto, `transform_tool_result`, `register_command`
+- **Shell hooks** — lifecycle hooks via shell scripts (no Python plugin needed)
+- **Dashboard plugin system + i18n** (EN + CN)
+- **Webhook direct-delivery mode** — zero-LLM push notifications
+- **Auxiliary models** — per-task overrides, main-model-first routing
+- New providers: NVIDIA NIM, Arcee AI, Step Plan, Vercel ai-gateway, Kimi K2.6, Xiaomi MiMo v2.5
+
+### AI Agent Ecosystem (Top by Stars)
+| Project | Stars | Notes |
+|---------|-------|-------|
+| JavaGuide | 155K | Java + AI interview guide |
+| Langflow | 147K | AI agent builder |
+| Dify | 139K | Agentic workflow platform |
+| System Prompts DB | 136K | AI tool system prompts |
+| LangChain | 135K | Agent engineering platform |
+| **Hermes Agent** | **115K** | **Our platform ↑** |
+| Awesome LLM Apps | 107K | 100+ agent apps |
+| Gemini CLI | 102K | Google's CLI agent |
+
+### MCP Ecosystem
+| Project | Stars | Notes |
+|---------|-------|-------|
+| awesome-mcp-servers | 86K | Collection |
+| playwright-mcp | 31K | Microsoft browser MCP |
+| github-mcp-server | 29K | Official GitHub MCP |
+| fastmcp | 25K | Pythonic MCP framework |
+| activepieces | 22K | 400+ MCP servers |
+
+### System Health
+- Disk: 19% used, 93G free
+- RAM: 1.5/7.5Gi (20%)
+- Load: 0.18
+- Uptime: 5d16h
+- MemOS orphans: 3 (gateway restart scheduled)
+- Skills: 100 total, 5 sampled — all valid
+- Backup: created and rotated
+
 ## 2026-04-24 17:32 — Idle Loop Digest
 
 ### 🔔 Hermes v0.11.0 Released (2026-04-23)
@@ -445,3 +495,285 @@ Vector OS Nano is the most promising integration target:
 - Disk: 17% used | RAM: 1.8/7.5Gi | Load: 0.06 | Uptime: 5d
 - MemOS orphans: 11 (~1GB) — gateway restart needed
 - Skills: 100 | Backup: current | Cron: active
+<<<<<<< HEAD
+=======
+
+## 2026-04-25 01:00 — Idle Loop Scan
+
+### AI Agents
+- Hermes Agent 114.8K⭐ (v0.11.0 released 2026-04-23)
+- deer-flow 63.7K⭐ (ByteDance SuperAgent)
+- claude-mem 66.9K⭐ (auto-capture Claude Code sessions)
+- everything-claude-code 166K⭐ (agent harness optimization)
+
+### Embodied AI
+- Genesis 28.6K⭐ (generative world for robotics)
+- FluxVLA 296⭐ (VLA engineering platform)
+- **VectorClaw 13⭐ (NEW)** — Anki Vector + OpenClaw MCP integration, validates MCP→robot bridge pattern
+
+### MCP Servers
+- awesome-mcp-servers 85.5K⭐
+- playwright-mcp 31.4K⭐
+- fastmcp 24.8K⭐
+
+### Key Observation
+MCP protocol is becoming the de facto standard for AI→robot communication. VectorClaw (OpenClaw+MCP for Anki Vector) confirms this pattern. Our ABot-Claw + Auto-Drive architecture is aligned with this trend.
+
+
+
+---
+
+## 2026-04-25 01:38 — Idle Loop Scan
+
+### AI Agents
+- Hermes v0.11.0 (released 2026-04-23) — 1,556 commits since v0.9.0
+- everything-claude-code 166K⭐ — agent harness optimization system
+- opencode 148.9K⭐ — open source coding agent
+
+### MCP Servers
+- No new significant entries beyond last scan
+
+### Embodied AI / Robotics
+- **BotBrain 174⭐** — Modular open-source brain for legged robots (Web UI, autonomous navigation) — directly relevant to NAV_DOG
+- Genesis 28.6K⭐ — still leading embodied AI simulator
+- FluxVLA 296⭐ — VLA platform
+- JushenRenji 17⭐ — 具身人机 (Bilibili channel, embodied AI projects)
+
+### Unitree Go2
+- unitree_webrtc_connect 306⭐ — WebRTC driver for Go2/G1
+- BotBrain 174⭐ — modular brain for legged robots (Go2 support)
+- go2_rl_gym 162⭐ — RL implementation for Go2
+
+### 2026-04-25 02:18 — Idle Loop Scan
+
+**AI Agents**: langflow 147K⭐, dify 139K⭐, hermes-agent 115K⭐ (v0.11.0), gemini-cli 102K⭐, browser-use 90K⭐
+
+**MCP Servers**: awesome-mcp-servers 85.5K⭐, playwright-mcp 31K⭐, github-mcp-server 29K⭐, fastmcp 25K⭐, activepieces 22K⭐, mcp-toolbox 15K⭐
+
+**Embodied AI**: Genesis 28.6K⭐, RLinf 3.2K⭐ (RL infra), every-embodied 1.6K⭐ (VLA tutorial), xr_teleoperate 1.4K⭐ (Unitree XR), unitree_rl_lab 974⭐ (Unitree RL IsaacLab)
+
+**New wiki notes**: RLinf, every-embodied, xr_teleoperate, unitree_rl_lab
+
+**Hermes**: v0.11.0 (released 2026-04-23) — awaiting user approval for upgrade
+
+---
+
+## 2026-04-25 02:51 — Idle Loop Scan
+
+### AI Agents (Top 8 by stars)
+- langflow 147.3K⭐ — AI agent builder platform (pushed 04-24)
+- dify 139K⭐ — Agentic workflow platform (pushed 04-24)
+- system-prompts-and-models-of-ai-tools 136K⭐ — Agent system prompts collection
+- langchain 134.8K⭐ — Agent engineering platform (pushed 04-24)
+- hermes-agent 114.9K⭐ — Our platform (v0.11.0, pushed 04-24)
+- awesome-llm-apps 107.3K⭐ — 100+ runnable AI agent apps
+- **gemini-cli 102.3K⭐** — Google's open-source Gemini CLI agent (pushed 04-24) ← NEW in top 8
+
+### MCP Servers (Recently pushed)
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp-server 29.2K⭐
+- fastmcp 24.8K⭐ — Pythonic MCP server builder (pushed 04-24)
+- mcp-toolbox 14.8K⭐ — Google's MCP server for databases (pushed 04-24)
+
+### Embodied AI
+- Genesis 28.6K⭐ — Generative world for robotics (pushed 04-24)
+- RLinf 3.2K⭐ — RL infrastructure for embodied AI (pushed 04-24)
+- **Embodied_AI_Paper_List 2K⭐** — SYSU survey paper list (pushed 04-16) ← NEW tracking
+- **Awesome-World-Models 1.6K⭐** — World models paper list (pushed 04-24) ← NEW tracking
+- **BEHAVIOR-1K 1.4K⭐** — Stanford embodied AI platform (pushed 04-24) ← NEW tracking
+- every-embodied 1.6K⭐ — Datawhale VLA tutorial
+
+### Hermes
+- v0.11.0 still latest (released 2026-04-23) — awaiting user approval for upgrade
+
+## 2026-04-25 03:28 — Idle Loop Scan
+
+### AI Agents (Top 8 by stars)
+- langflow 147.3K⭐ — AI agent builder platform
+- dify 139K⭐ — Agentic workflow platform
+- langchain 134.8K⭐ — Agent engineering platform
+- hermes-agent 114.9K⭐ — Our platform (v0.11.0)
+- awesome-llm-apps 107.3K⭐ — 100+ runnable AI agent apps
+- gemini-cli 102.3K⭐ — Google's open-source Gemini CLI agent
+- **browser-use 90K⭐** — Web automation for AI agents ← returned to top-8
+
+### MCP Servers
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp-server 29.2K⭐
+- fastmcp 24.8K⭐, activepieces 21.9K⭐, mcp-toolbox 14.8K⭐
+- **casdoor 13.5K⭐** — Agent-first IAM/MCP gateway + auth ← NEW, relevant to AOP security
+- **Figma-Context-MCP 14.5K⭐** — Figma layout for AI coding agents ← NEW
+
+### Embodied AI
+- Genesis 28.6K⭐, RLinf 3.2K⭐, Embodied_AI_Paper_List 2K⭐
+- every-embodied 1.6K⭐, Awesome-World-Models 1.6K⭐, BEHAVIOR-1K 1.4K⭐
+- No new significant entries since last scan
+
+### Hermes
+- v0.11.0 still latest (released 2026-04-23) — awaiting user approval for upgrade
+
+---
+
+## 2026-04-25 04:38 — Idle Loop Pass
+
+### ENSURE_CONTINUATION
+- ✅ Health: disk 19%, RAM 20%, load 0.13, gateway running, 1 MemOS process (normal)
+- ✅ Backup: backup_20260425-0438.tar.gz created, 5 retained
+- ✅ Skill integrity: 100 skills, 5 sampled — all frontmatter valid
+- ✅ Wiki: committed and pushed pending changes (6 files)
+
+### EXPAND_CAPABILITIES
+- ✅ No new patterns to distill, no critical patches needed
+- ✅ No skills failing in recent idle log
+
+### EXPAND_WORLD_MODEL
+- ✅ GitHub scan: AI agent ecosystem stable (langflow 147K⭐, dify 139K⭐, hermes-agent 115K⭐)
+- ✅ MCP ecosystem: awesome-mcp-servers 85.5K⭐, playwright-mcp 31K⭐, fastmcp 25K⭐
+- ✅ Embodied AI: Genesis 28.5K⭐ (generative world for robotics), RLinf 3.2K⭐, Awesome-World-Models 1.6K⭐
+- ✅ Hermes: v0.11.0 (v2026.4.23) still latest release
+- ✅ browser-use now 90K⭐ (was 89K)
+
+### Pending Items (carried forward)
+- MULTI_AGENT: configure primary model (needs user OpenRouter key)
+- MULTI_AGENT: configure secondary model
+- MULTI_AGENT: configure Hindsight/Memos
+
+---
+
+## 2026-04-25 05:11 — Autonomous Drive Idle Sweep
+
+### AI Agent Ecosystem
+- **Hermes Agent v0.11.0** (2026-04-23): 1,556 commits, 761 PRs, 224K insertions, 224 contributors since v0.9.0
+- **Langflow** 147K⭐ — visual AI agent/workflow builder
+- **Dify** 139K⭐ — production agentic workflow platform
+- **browser-use** 90K⭐ — web automation for AI agents
+- **gemini-cli** 102K⭐ — Google Gemini in terminal
+
+### MCP Ecosystem
+- **awesome-mcp-servers** 85.5K⭐ — master list
+- **playwright-mcp** 31.4K⭐ — Microsoft Playwright MCP
+- **fastmcp** 24.8K⭐ — Pythonic MCP server builder
+- **mcp-toolbox** 14.8K⭐ — Google's database MCP server
+- **casdoor** 13.5K⭐ — Agent-first IAM + MCP gateway
+
+### System Status
+- Disk/RAM: healthy
+- Gateway: running (PID 2176864)
+- Hindsight: running
+- PostgreSQL: running
+- MemOS bridge: 2 processes (normal)
+- Skills: 100 total
+- Cron: 2 active jobs
+
+---
+
+## 2026-04-25 05:43 — Idle Loop Scan
+
+### Hermes v0.11.0 Released (2026-04-23)
+- Ink-based TUI (`hermes --tui`) with React/Ink rewrite
+- Pluggable Transport ABC + Native AWS Bedrock support
+- 5 new inference paths, QQBot platform (17th total)
+- GPT-5.5 via Codex OAuth
+- We are on v0.10.0 — **1363 commits behind**
+- ⚠️ Consider upgrading after user approval
+
+### Coding Agent Landscape
+- `everything-claude-code` 166K⭐ — Claude Code skill/memory/instinct system
+- `opencode` 149K⭐ — Open source coding agent (anomalyco)
+- `claude-code` 117K⭐ — Anthropic's terminal coding agent
+- `codex` 77K⭐ — OpenAI's lightweight terminal agent
+
+### MCP Server Ecosystem
+- `awesome-mcp-servers` 85K⭐ — Directory
+- `playwright-mcp` 31K⭐ — Microsoft Playwright MCP
+- `github-mcp-server` 29K⭐ — GitHub official MCP
+- `fastmcp` 25K⭐ — Pythonic MCP server builder
+- `activepieces` 22K⭐ — 400+ MCP servers for AI agents
+
+
+## 2026-04-25 06:19 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- Hermes v0.11.0 (released Apr 23) still latest — we're on v0.10.0, 1363 commits behind
+- Top agents stable: langflow 147K⭐, dify 139K⭐, hermes-agent 115K⭐, browser-use 90K⭐
+- gemini-cli 102K⭐ (Google's terminal agent) — new entry since last scan
+
+### MCP Ecosystem
+- awesome-mcp-servers 85.5K⭐, playwright-mcp 31.4K⭐, github-mcp 29.2K⭐, fastmcp 24.8K⭐
+- Google mcp-toolbox 14.8K⭐ — database-focused MCP server
+- casdoor 13.5K⭐ — Agent-first IAM + MCP gateway (previously noted)
+
+### Embodied AI / Robotics
+- RLinf 3.2K⭐ (NEW) — RL Infrastructure for Embodied and Agentic AI — relevant to our stack
+- every-embodied 1.6K⭐ (datawhalechina) — Chinese VLA/OpenVLA/Pi0 tutorial — useful for reproduction
+- Genesis 28.6K⭐ still leading
+
+### System Health
+- MemOS bridge orphans: 7 processes (~630MB) — scheduled gateway restart for cleanup
+
+## 2026-04-25 06:53 — Cron Sweep
+
+### AI Agent Ecosystem
+- Top: JavaGuide 155K, Langflow 147K, Dify 139K, Langchain 135K, Hermes 115K
+- Coding agents: everything-claude-code 166K (harness optimization), opencode 149K, claude-code 118K, codex 78K
+- claude-mem 67K — auto-capture plugin for Claude Code, relevant to our memory architecture
+
+### MCP Ecosystem
+- awesome-mcp-servers 86K, playwright-mcp 31K, github-mcp-server 29K, fastmcp 25K
+- mcp-toolbox 15K (Google, database MCP), Figma-Context-MCP 15K
+- activepieces 22K — 400+ MCP servers for AI agents, workflow automation
+
+### Hermes
+- v0.11.0 (v2026.4.23) still latest — 1,556 commits, 761 PRs, 224K insertions since v0.9.0
+- We are on v0.10.0, 1363 commits behind — upgrade pending user approval
+
+### Robotics / Quadruped
+- go2-convex-mpc 96 stars — Convex MPC controller for Unitree Go2 in MuJoCo (directly relevant)
+- MGDP 87 stars — Generalized Depth Perception for quadruped (Adv. Sci. 2026)
+- basic-locomotion-isaaclab 68 stars — IsaacLab extension for multi-quadruped locomotion
+- mhflocke 13 stars — Biologically grounded embodied cognition for quadruped locomotion
+
+---
+
+## 2026-04-25 07:31 — Idle Loop Scan
+
+### New Notable Projects
+- **RLinf** (3.2K⭐) — RL Infrastructure for Embodied and Agentic AI. Relevant to our robot RL training pipeline. https://github.com/RLinf/RLinf
+- **every-embodied** (1.6K⭐) — Datawhalechina tutorial: build VLA/OpenVLA/SmolVLA/Pi0 from scratch. Chinese-language, very useful for reproduction. https://github.com/datawhalechina/every-embodied
+- **activepieces** (21.9K⭐) — AI Agents + 400+ MCP servers + workflow automation. Potential RPA framework candidate. https://github.com/activepieces/activepieces
+
+### Hermes Ecosystem
+- **Hermes v0.11.0** released 2026-04-23 — 1,556 commits since v0.9.0, 761 merged PRs, 224K insertions, 22+ community contributors. Major release.
+
+### MCP Ecosystem
+- **playwright-mcp** (31.4K⭐) — Microsoft official Playwright MCP server. Growing fast.
+- **fastmcp** (24.8K⭐) — Pythonic MCP server builder.
+- **mcp-toolbox** (14.8K⭐) — Google's MCP server for databases.
+
+### No changes in
+- Genesis (28.6K⭐), ABot-Claw ecosystem — same as last scan
+
+---
+
+## 2026-04-25 08:07 — Idle Loop Scan
+
+### AI Agent Ecosystem
+- **everything-claude-code** 166K⭐ — Agent harness optimization system (skills, instincts, memory)
+- **opencode** 149K⭐ — Open source coding agent (actively pushed 2026-04-25)
+- **codex** 77.7K⭐ — Lightweight coding agent (OpenAI, actively pushed)
+- **claude-mem** 67K⭐ — Claude Code plugin for auto-capturing sessions
+
+### MCP Ecosystem
+- **awesome-mcp-servers** 85.5K⭐ — MCP server collection (actively maintained)
+- **github-mcp-server** 29.2K⭐ — GitHub's official MCP server
+- **activepieces** 21.9K⭐ — AI Agents + MCPs + workflow automation (~400 MCP servers)
+
+### Robotics / Legged Locomotion (DIRECTLY RELEVANT)
+- **DreamWaQ_Go2W** 86⭐ (ShengqianChen) — Go2W legged-wheel locomotion RL based on NVIDIA Isaac Gym 🎯
+- **ihmc-open-robotics-software** 313⭐ — Legged locomotion algorithms + momentum-based controller
+- **go2-open-competition-2026** — Tencent AI Arena 2026 legged robot competition starter
+
+### Key Observation
+- DreamWaQ_Go2W is directly deployable on Unitree Go2W — matches our NAV_DOG path
+- NVIDIA Isaac Gym → Sim2Real pipeline aligns with Marathongo validation approach
+- Tencent AI Arena 2026 competition could be a validation target
+
+>>>>>>> origin/master

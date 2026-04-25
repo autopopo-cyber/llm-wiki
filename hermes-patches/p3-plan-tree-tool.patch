@@ -1,0 +1,78 @@
+*** Begin Patch
+*** Update File: tools/plan_tree_tool.py
+@@ new file @@
++"""Plan-tree tool — 让 LLM 在工具调用中读写任务计划树。"""
++
++import json
++from typing import Optional
++
++try:
++    from hermes_state import SessionDB
++    from plan_tree import PlanTreeStore
++except Exception:
++    SessionDB = None  # type: ignore
++    PlanTreeStore = None  # type: ignore
++
++
++def plan_tree_tool(
++    action: str,
++    node_id: str = None,
++    goal: str = None,
++    context: str = None,
++    progress_pct: float = None,
++    reason: str = None,
++    session_id: str = None,
++) -> str:
++    """
++    让 LLM 在工具调用中读写 plan-tree。
++
++    Args:
++        action: "read" | "update_progress" | "mark_complete" | "mark_blocked" | "add_subtask"
++        node_id: 目标节点 ID
++        goal: 新节点的目标描述（add_subtask 时必填）
++        context: 新节点的上下文
++        progress_pct: 0.0~1.0 的进度（update_progress 时使用）
++        reason: 阻塞原因（mark_blocked 时使用）
++        session_id: 当前会话 ID
++    """
++    if PlanTreeStore is None or SessionDB is None:
++        return json.dumps({"error": "Plan-tree dependencies not available"}, ensure_ascii=False)
++
++    try:
++        db = SessionDB()
++        store = PlanTreeStore(db)
++    except Exception as e:
++        return json.dumps({"error": f"Failed to init PlanTreeStore: {e}"}, ensure_ascii=False)
++
++    if action == "read":
++        node = store.get_next_node(session_id)
++        return json.dumps(node, ensure_ascii=False, default=str) if node else json.dumps(
++            {"status": "no_pending_nodes"}, ensure_ascii=False
++        )
++
++    elif action == "update_progress":
++        if node_id is None:
++            return json.dumps({"error": "node_id required"}, ensure_ascii=False)
++        store.update_node_progress(session_id, node_id, progress_pct or 0.0)
++        return json.dumps({"success": True, "node_id": node_id}, ensure_ascii=False)
++
++    elif action == "mark_complete":
++        if node_id is None:
++            return json.dumps({"error": "node_id required"}, ensure_ascii=False)
++        store.mark_node_completed(session_id, node_id)
++        return json.dumps({"success": True, "node_id": node_id}, ensure_ascii=False)
++
++    elif action == "mark_blocked":
++        if node_id is None:
++            return json.dumps({"error": "node_id required"}, ensure_ascii=False)
++        store.mark_node_blocked(session_id, node_id, reason)
++        return json.dumps({"success": True, "node_id": node_id}, ensure_ascii=False)
++
++    elif action == "add_subtask":
++        if goal is None:
++            return json.dumps({"error": "goal required for add_subtask"}, ensure_ascii=False)
++        new_id = store.create_node(session_id, goal, context or "", parent_id=node_id)
++        return json.dumps({"success": True, "node_id": new_id}, ensure_ascii=False)
++
++    return json.dumps({"error": f"Unknown action: {action}"}, ensure_ascii=False)
+*** End Patch

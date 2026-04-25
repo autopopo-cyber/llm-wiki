@@ -1,0 +1,103 @@
+*** Begin Patch
+*** Update File: gateway/run.py
+@@ _handle_message_with_agent @@
++    async def _handle_message_with_agent_plan_tree(
++        self, event, source, _quick_key: str, run_generation: int
++    ):
++        """
++        Plan-tree 调度分支：先分解任务，再逐节点执行。
++
++        当配置中 enable_plan_tree=True 时被调用。
++        """
++        from plan_tree import PlanTreeStore
++
++        session_entry = self.session_store.get_or_create_session(source)
++        history = self._load_history(session_entry)
++        system_msg = self._build_system_prompt(session_entry)
++
++        plan_store = PlanTreeStore(self._session_db)
++        next_node = plan_store.get_next_node(session_entry.session_id)
++
++        if next_node is None:
++            # 无待办节点：让模型做任务分解
++            agent = self._create_agent(session_entry)
++            decomposition = agent.run_conversation(
++                user_message=event.text,
++                system_message=system_msg,
++                conversation_history=history,
++            )
++            nodes = _extract_plan_nodes(decomposition.get("final_response", ""))
++            for node in nodes:
++                plan_store.create_node(
++                    session_id=session_entry.session_id,
++                    goal=node.get("goal", ""),
++                    context=node.get("context", ""),
++                    priority=node.get("priority", 0),
++                )
++            next_node = plan_store.get_next_node(session_entry.session_id)
++
++        if next_node:
++            agent = self._create_agent(session_entry)
++            plan_store.mark_node_in_progress(
++                session_entry.session_id, next_node["id"]
++            )
++            result = agent.run_task(
++                task_node=next_node,
++                system_message=system_msg,
++                conversation_history=history,
++            )
++            response_text = result.get("final_response", "")
++        else:
++            # Fallback to regular conversation
++            agent = self._create_agent(session_entry)
++            result = agent.run_conversation(
++                user_message=event.text,
++                system_message=system_msg,
++                conversation_history=history,
++            )
++            response_text = result.get("final_response", "")
++
++        await self._send_response(source, response_text)
++
++
++def _extract_plan_nodes(text: str) -> list:
++    """
++    从模型响应中提取计划节点。
++
++    期望格式：
++        [PLAN]
++        1. goal text | priority:high | context:extra info
++        2. another goal | priority:medium
++        [/PLAN]
++    """
++    import re
++    nodes = []
++    match = re.search(r"\[PLAN\](.*?)\[/PLAN\]", text, re.DOTALL | re.IGNORECASE)
++    if not match:
++        # 无标签时，将整个文本作为单一节点
++        return [{"goal": text.strip(), "context": "", "priority": 0}]
++
++    plan_body = match.group(1)
++    for line in plan_body.strip().splitlines():
++        line = line.strip()
++        if not line or line.startswith("-"):
++            continue
++        # 去掉前缀编号
++        line = re.sub(r"^\d+[\.\)\-]\s*", "", line)
++        if not line:
++            continue
++        goal = line
++        priority = 0
++        context = ""
++        if "|" in line:
++            parts = [p.strip() for p in line.split("|")]
++            goal = parts[0]
++            for p in parts[1:]:
++                if p.lower().startswith("priority:"):
++                    lvl = p.split(":", 1)[1].strip().lower()
++                    priority = {"high": 2, "medium": 1}.get(lvl, 0)
++                elif p.lower().startswith("context:"):
++                    context = p.split(":", 1)[1].strip()
++        nodes.append({"goal": goal, "context": context, "priority": priority})
++    return nodes if nodes else [{"goal": text.strip(), "context": "", "priority": 0}]
+*** End Patch

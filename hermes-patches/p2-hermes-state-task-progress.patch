@@ -1,0 +1,114 @@
+*** Begin Patch
+*** Update File: hermes_state.py
+@@ CREATE TABLE IF NOT EXISTS messages @@
+         # Create tables if they don't exist
+         self._conn.execute(
+             """CREATE TABLE IF NOT EXISTS sessions (
+                id TEXT PRIMARY KEY,
+                source TEXT,
+                model TEXT,
+                title TEXT,
+                system_prompt TEXT,
+                started_at REAL,
+                ended_at REAL,
+                end_reason TEXT,
+                message_count INTEGER DEFAULT 0,
+                tool_call_count INTEGER DEFAULT 0,
+                input_tokens INTEGER DEFAULT 0,
+                output_tokens INTEGER DEFAULT 0,
+                cache_read_tokens INTEGER DEFAULT 0,
+                cache_write_tokens INTEGER DEFAULT 0,
+                reasoning_tokens INTEGER DEFAULT 0,
+                estimated_cost_usd REAL,
+                cost_status TEXT,
+                cost_source TEXT,
+                billing_provider TEXT,
+                billing_base_url TEXT,
+                billing_mode TEXT
+             )"""
+         )
++
++        self._conn.execute(
++            """CREATE TABLE IF NOT EXISTS task_progress (
++                id INTEGER PRIMARY KEY AUTOINCREMENT,
++                session_id TEXT NOT NULL,
++                task_id TEXT NOT NULL,
++                node_id TEXT NOT NULL,
++                status TEXT NOT NULL DEFAULT 'pending',
++                progress_pct REAL DEFAULT 0.0,
++                result_summary TEXT,
++                metadata TEXT,
++                timestamp REAL NOT NULL,
++                UNIQUE(session_id, node_id)
++            )"""
++        )
++        self._conn.execute(
++            "CREATE INDEX IF NOT EXISTS idx_task_progress_session "
++            "ON task_progress(session_id, status)"
++        )
++
+         self._conn.execute(
+             """CREATE TABLE IF NOT EXISTS messages (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+*** End Patch
+
+*** Begin Patch
+*** Update File: hermes_state.py
+@@ def append_message @@
+     def append_task_progress(
+         self,
+         session_id: str,
+         task_id: str,
+         node_id: str,
+         status: str = "pending",
+         progress_pct: float = 0.0,
+         result_summary: str = None,
+         metadata: dict = None,
+     ) -> int:
+         """
+         Persist or update a plan-tree node progress row.
+
+         Uses UPSERT (INSERT ... ON CONFLICT ... DO UPDATE) so repeated
+         calls are idempotent and always overwrite with the latest state.
+         """
+         metadata_json = json.dumps(metadata) if metadata else None
+
+         def _do(conn):
+             cursor = conn.execute(
+                 """INSERT INTO task_progress
+                    (session_id, task_id, node_id, status, progress_pct,
+                     result_summary, metadata, timestamp)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(session_id, node_id) DO UPDATE SET
+                      status=excluded.status,
+                      progress_pct=excluded.progress_pct,
+                      result_summary=excluded.result_summary,
+                      metadata=excluded.metadata,
+                      timestamp=excluded.timestamp""",
+                 (
+                     session_id,
+                     task_id,
+                     node_id,
+                     status,
+                     progress_pct,
+                     result_summary,
+                     metadata_json,
+                     time.time(),
+                 ),
+             )
+             return cursor.lastrowid
+
+         return self._execute_write(_do)
+
+     def get_pending_task_nodes(self, session_id: str) -> list:
+         """Return all non-completed nodes for a session, highest priority first."""
+         with self._lock:
+             cursor = self._conn.execute(
+                 """SELECT * FROM task_progress
+                    WHERE session_id = ? AND status != 'completed'
+                    ORDER BY timestamp ASC""",
+                 (session_id,),
+             )
+             rows = cursor.fetchall()
+         return [dict(row) for row in rows]
+*** End Patch
