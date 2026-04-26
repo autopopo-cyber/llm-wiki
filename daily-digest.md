@@ -817,3 +817,120 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
   ✅ Hermes v0.11.0: TUI rewrite, Transport ABC, GPT-5.5/Codex, QQBot, /steer, smarter delegation
   📊 Market signal: autonomous agents splitting into 3 tracks — coding (cline), orchestration (crewAI), local (agenticSeek)
   ⏭️ Next: Hermes v0.11 upgrade assessment / MODEL_CONFIG unblock / SKILL_CRYSTALLIZE
+
+
+## 2026-04-26 10:46 — UPDATE_KNOWLEDGE (Ecosystem Scan)
+
+### AI Agent Ecosystem (4 new/recent)
+| Project | Stars | Pushed | Notes |
+|---------|-------|--------|-------|
+| Prat011/awesome-llm-skills | 1,160 | 04-22 | Curated AI agent skill resources |
+| Yuan-ManX/ai-game-devtools | 1,150 | 04-26 | AI game dev tool tracking |
+| alchemiststudiosDOTai/tunacode | 123 | 04-23 | CLI coding agent, multi-LLM |
+| johnxie/awesome-code-docs | 38 | 04-20 | 201 AI agent tutorials |
+
+### Hermes Ecosystem (8 recent — very active)
+| Project | Stars | Pushed | Relevance |
+|---------|-------|--------|-----------|
+| garrytan/gbrain | 11,394 | 04-25 | ⭐ Opinionated Hermes brain — our reference |
+| xpf0000/FlyEnv | 2,746 | 04-23 | Local dev toolbox w/ Hermes support |
+| qingchencloud/clawpanel | 2,534 | 04-25 | 🆕 Multi-engine AI panel — Tauri |
+| codejunkie99/agentic-stack | 1,621 | 04-25 | 🆕 Portable .agent/ folder standard |
+| itq5/OpenClaw-Admin | 624 | 04-19 | Vue 3 admin for OpenClaw/Hermes |
+| Agents365-ai/drawio-skill | 598 | 04-23 | Agent skill for diagrams |
+| clawshell/clawshell | 272 | 04-25 | 🆕 Runtime security layer |
+| HuangYuChuh/ComfyUI_Skills | 239 | 04-21 | ComfyUI agent workflows |
+
+### MCP Ecosystem (4 recent)
+| Project | Stars | Pushed | Notes |
+|---------|-------|--------|-------|
+| microsoft/mcp | 3,045 | 04-25 | Official Microsoft MCP servers |
+| agentic-community/mcp-gateway-registry | 608 | 04-26 | Enterprise MCP gateway |
+| mpeirone/zabbix-mcp-server | 202 | 04-24 | Zabbix monitoring MCP |
+| atom2ueki/mcp-server-synology | 92 | 04-24 | Synology NAS MCP |
+
+### Key Observations
+- **Hermes ecosystem is booming**: 8 repos updated in 7 days, 3 brand-new (clawpanel, agentic-stack, clawshell)
+- **clawshell (272⭐)**: Runtime security for Hermes — could solve our cron safety issues
+- **agentic-stack (1,621⭐)**: Portable .agent/ folder standard — aligns with our wiki-offload pattern
+- **clawpanel (2,534⭐)**: Multi-engine AI management panel (Tauri app) — potential replacement for our WebUI
+- **gbrain hit 11.4K⭐**: Up from ~10.5K, growing fast
+- **Proven pitfall**: GitHub `pushed:>DATE` filter returns empty; must filter client-side
+
+
+## GitHub Scan — 2026-04-26 12:08
+
+### AI Agents (Top)
+| Project | Stars | Pushed | Note |
+|---------|-------|--------|------|
+| OpenCode | 150K⭐ | 04-26 | Top coding agent |
+| Dify | 139K⭐ | 04-26 | Agentic workflow platform |
+| Hermes-Agent | 117K⭐ | 04-26 | Core ecosystem +116K |
+| Gemini-CLI | 102K⭐ | 04-25 | Google CLI agent |
+| Browser-use | 90K⭐ | 04-25 | Web automation |
+| Codex CLI | 78K⭐ | 04-26 | OpenAI coding agent |
+| Cline | 61K⭐ | 04-25 | IDE coding agent |
+
+### Robotics/VLA
+| Project | Stars | Note |
+|---------|-------|------|
+| LeRobot | 23.5K⭐ | HuggingFace end-to-end |
+| IsaacLab | 7K⭐ | NVIDIA robot learning (pushed 04-26) |
+| OM1 | 2.8K⭐ | Modular AI robot runtime |
+| ros-mcp-server | 1.2K⭐ | MCP+ROS bridge |
+| BotBrain | 176⭐ | Legged robot brain (ROS2) — NEW! |
+| VLA-Handbook | 165⭐ | Chinese VLA handbook (pushed 04-26) |
+
+### MCP Ecosystem
+| Project | Stars | Note |
+|---------|-------|------|
+| Google mcp-toolbox | 14.8K⭐ | DB tools |
+| Figma-Context-MCP | 14.5K⭐ | Design→code |
+| claude-context | 9.4K⭐ | Code search |
+| awesome-mcp-servers | 85.6K⭐ | Curated list |
+
+### Hermes Ecosystem
+| Project | Stars | Note |
+|---------|-------|------|
+| gbrain | 11.4K⭐ | Opinionated brain |
+| hermes-webui | 4.2K⭐ | Web+phone UI |
+| clawpanel | 2.5K⭐ | Multi-engine panel |
+
+🔑 **Key insight**: BotBrain (ROS2, legged robots) + ros-mcp-server (MCP+ROS bridge) = direct integration path for NAV_DOG. VLA space has handbook-level docs now — good reference for VLAC_CRITIC.
+
+---
+
+## 2026-04-26 13:20 — Cron Sweep #2 (13:15)
+
+### ENSURE_CONTINUATION ✅
+- **Disk**: 30G/118G (26%), 84G free — healthy
+- **RAM**: 1.4G/7.5G (19%), 6.1G avail — healthy  
+- **Load**: 0.01/0.02/0.04 — idle
+- **Gateway**: PID 458128 on :8642 (bound 127.0.0.1) — healthy
+- **MC**: PID 208257 on :3000, API 200 — healthy
+- **MemOS orphans**: 0 — clean
+- **Cron**: lock_refresh (every 5min ✅), idle_loop b291ea56be8f (every 30min, next 13:44) ✅
+- **Backup**: backup_20260426-1320.tar.gz 9.1KB, 5 in rotation
+- **Skill integrity**: 87 leaf skills, 75 valid (86%), 12 missing version field (legacy)
+
+### EXPAND_CAPABILITIES
+- **HEADLESS_SIM_SKILL**: Pattern identified but not yet crystallized — sim_world.py not found on coordinator (likely on qin-Super-Server). SSH to subordinate blocked (Permission denied). Deferred.
+- **PARALLEL_AGENT_SKILL**: Overlaps with existing `subagent-driven-development` skill. No new pattern observed.
+- **Skill patches**: No critical patches identified.
+
+### EXPAND_WORLD_MODEL — SCAN_SOURCES
+- **Hermes-agent**: 117K⭐ (+7K since 04-25 scan, growing ~2K/day)
+- **New notable**: claude-mem 67K⭐ (captures everything Claude does during sessions)
+- **New notable**: deer-flow (bytedance) 63K⭐ — "long-horizon SuperAgent harness"
+- **Quadruped**: MGDP (HKU, 88⭐, Adv. Sci. 2026) — generalized depth perception for quadrupeds
+- **Quadruped**: basic-locomotion-isaaclab (DLS Lab, 69⭐) — IsaacLab for multiple quadrupeds with sim-to-sim
+- **MCP**: No major new servers since last scan
+- **Hermes releases**: Latest v2026.4.23 (v0.11.0), no new since 04-23
+
+### ⚠️ MC Dispatch Status
+- **ALL agent tasks FAILED**: MC-20 (A2_URDF_SIM), MC-21 (A2_ROS2_GAZEBO), MC-16/17/19 all failed
+- **openclaw symlink**: In place (/usr/local/bin/openclaw → e2e-openclaw) ✅
+- **Root cause**: Agents (白起/王翦/丞相) registered in MC but offline — running on qin-Super-Server, not this coordinator
+- **SSH to subordinates**: Permission denied (key not configured on coordinator)
+- **Plan-tree/MC desync**: Plan-tree shows A2_SIM "ongoing" but MC tasks are `failed`
+- **Recommendation**: Either run agents on coordinator machine OR configure SSH keys for cross-machine dispatch
