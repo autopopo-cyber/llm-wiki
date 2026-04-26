@@ -13,9 +13,9 @@
 
 ## LV.2 — BACKUP_DATA 🔁
 > 备份数据与配置
-> [last: 2026-04-26 15:01 | 🔁]
-- LV.3 自动备份执行（plan-tree, config, wiki, skills）[last: 2026-04-26 09:42 | ✅] backup_20260426-0537.tar.gz 3.9MB
-- LV.3 备份轮转策略（保留最近5份）[last: 2026-04-26 09:42 | ✅] 4/5 in rotation
+> [last: 2026-04-26 16:41 | 🔁]
+- LV.3 自动备份执行（plan-tree, config, wiki, skills）[last: 2026-04-26 16:41 | ✅] backup_20260426-1641.tar.gz 3.9MB
+- LV.3 备份轮转策略（保留最近5份）[last: 2026-04-26 16:41 | ✅] 5/5 in rotation
 
 ## LV.2 — SKILL_INTEGRITY 🔁
 > Skill 完整性验证
