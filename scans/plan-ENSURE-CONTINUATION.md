@@ -25,7 +25,7 @@
 
 ## LV.2 — CRON_RESTORE 🔁
 > 重建丢失的 cron 定时任务
-> [last: 2026-04-26 13:20 | 🔁]
-- LV.3 轻量心跳 cron (30s, bash-only, curl MC) [last: 2026-04-26 03:23 | ✅] crontab installed, MC not running (skips)
-- LV.3 Idle loop cron (30min, LLM驱动) [last: 2026-04-26 03:23 | ✅] active (b291ea56be8f)
-- LV.3 锁续期 cron (5min) [last: 2026-04-26 03:23 | ✅] crontab installed
+> [last: 2026-04-26 17:18 | 🔁]
+- LV.3 轻量心跳 cron (30s, bash-only, curl MC) [last: 2026-04-26 17:18 | ✅] crontab installed, MC not running (skips)
+- LV.3 Idle loop cron (30min, LLM驱动) [last: 2026-04-26 17:18 | ✅] active (b291ea56be8f)
+- LV.3 锁续期 cron (5min) [last: 2026-04-26 17:18 | ✅] crontab installed
