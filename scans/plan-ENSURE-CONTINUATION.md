@@ -4,7 +4,7 @@
 
 ## LV.2 — HEALTH_CHECK 🔁
 > 系统健康检查：磁盘/RAM/服务/cron
-> [last: 2026-04-27 21:50 | 🔁]
+> [last: 2026-04-27 22:58 | 🔁]
 - LV.3 磁盘空间检查 [last: 2026-04-27 20:08 | ✅]
 - LV.3 内存与负载检查 [last: 2026-04-27 20:08 | ✅]
 - LV.3 关键进程存活（gateway✅ MC✅ MemOS✅）[last: 2026-04-27 20:08 | ✅]
@@ -19,13 +19,13 @@
 
 ## LV.2 — SKILL_INTEGRITY 🔁
 > Skill 完整性验证
-> [last: 2026-04-27 20:08]
+> [last: 2026-04-27 22:58]
 - LV.3 抽样检查 SKILL.md frontmatter [last: 2026-04-27 07:18 | ✅] → 106 leaf skills, 10 sampled — 10/10 valid frontmatter
 - LV.3 检查 skill 引用的工具/命令可用性 [last: 2026-04-26 17:52 | ✅] → 0 broken refs
 
 ## LV.2 — CRON_RESTORE 🔁
 > 重建丢失的 cron 定时任务
-> [last: 2026-04-27 20:08]
+> [last: 2026-04-27 22:58]
 - LV.3 轻量心跳 cron (30s, bash-only, curl MC) [last: 2026-04-27 03:40 | ✅] crontab installed, MC not running (skips)
 - LV.3 Idle loop cron (30min, LLM驱动) [last: 2026-04-27 03:40 | ✅] active (b291ea56be8f)
 - LV.3 锁续期 cron (5min) [last: 2026-04-27 03:40 | ✅] crontab installed
