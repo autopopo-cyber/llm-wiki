@@ -33,7 +33,8 @@ llm-wiki/
 - [[agent-analysis/a2a-network-status]] — A2A 网络状态
 - [[philosophy/organization-architecture]] — 组织架构设计
 - [[philosophy/on-sleep-death-and-immortality]] — 生死观/自洽生存逻辑
-
+- [[philosophy/multi-agent-organization-manifesto]] — **多Agent组织纲领（对外宣传核心文档）**
+- [[philosophy/上下文衰减与分层记忆架构]] — 上下文衰减与分层记忆
 ## 🔧 技术文档
 - [[hermes-ops/hermes-logic-patch-design]] — Hermes 逻辑变革设计（李斯，546行）
 - [[hermes-ops/hermes-upgrade-guide-2026-04-26]] — **Hermes 升级指南（重要！）**

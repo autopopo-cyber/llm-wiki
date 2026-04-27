@@ -934,3 +934,33 @@ MCP protocol is becoming the de facto standard for AI→robot communication. Vec
 - **SSH to subordinates**: Permission denied (key not configured on coordinator)
 - **Plan-tree/MC desync**: Plan-tree shows A2_SIM "ongoing" but MC tasks are `failed`
 - **Recommendation**: Either run agents on coordinator machine OR configure SSH keys for cross-machine dispatch
+
+
+---
+
+## 2026-04-27 04-27 12:36 — Idle Loop Pass (UPDATE_KNOWLEDGE)
+
+### ENSURE_CONTINUATION ✅ (quick check, last full 11:58)
+- **Disk**: 28% (31G/118G), 83G free — healthy
+- **RAM**: 1.8G/7.5G (24%) — healthy
+- **Load**: 0.07/0.03/0.15 — idle
+- **Gateway**: 5 processes, port :8642 — healthy
+- **MC**: port 3000, HTTP 307 — healthy
+- **MemOS orphans**: 0 — clean
+- **Uptime**: 2 days 1 hour
+
+### EXPAND_CAPABILITIES
+- **DISTILL_PATTERNS**: No new patterns from last 3 cron sessions. HEADLESS_SIM_SKILL + PARALLEL_AGENT_SKILL still blocked (SSH to qin-Super-Server).
+- **PATCH_SKILLS**: api_helpers.py still missing (patched in autonomous-drive SKILL.md). mc-poll.sh missing across 5 skills (non-current scope). No critical new patches.
+
+### EXPAND_WORLD_MODEL
+- **SCAN_SOURCES**: Skipped (last at 11:58, 32min ago). Last scan found: fastmcp 24.8K⭐, activepieces 21.9K⭐, Hermes 118K⭐.
+- **PROPAGATE_SPEC**: No new content for Dev.to / GitHub PR / Reddit.
+
+### Current State
+- **Hermes**: v2026.4.23 (v0.11.0) still latest release
+- **Agent ecosystem**: Hermes-agent 118K⭐, Langflow 147K, Dify 139K
+- **NAV_DOG**: E2E+Deploy blocked (no GPU, needs local agents)
+- **A2_SIM**: Active via MC (白起+王翦)
+- **FORUM_POST**: Active (相邦)
+- **MC agents**: All offline on qin-Super-Server. Coordinator has no SSH access.
