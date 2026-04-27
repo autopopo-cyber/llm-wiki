@@ -13,7 +13,7 @@
 
 ## LV.2 — BACKUP_DATA 🔁
 > 备份数据与配置
-> [last: 2026-04-27 19:32 | 🔁]
+> [last: 2026-04-27 22:22 | 🔁]
 - LV.3 自动备份执行（plan-tree, config, wiki, skills）[last: 2026-04-27 19:32 | ✅] backup_20260427-1932.tar.gz 4.0MB
 - LV.3 备份轮转策略（保留最近5份）[last: 2026-04-27 19:32 | ✅] 5/5 in rotation
 
